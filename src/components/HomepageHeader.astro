@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
 
 const esData = {
-  title: "La Universidad Principal de Formación de Pilotos de México",
+  title: "La Universidad <br> Principal de Formación <br> de Pilotos de México",
   subtitle: "Convierte tu amor por volar en una carrera profesional",
   primaryButtonText: "Regístrate",
   secondaryButtonText: "Más Información",
@@ -30,18 +30,28 @@ const data = Astro.currentLocale === "en" ? enData : esData;
     quality={100}
   />
 
-  <div class="absolute inset-0 bg-main-black/60 -z-40"></div>
+  <iframe
+    src="https://www.youtube.com/embed/L9q_TVnSj_4?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=L9q_TVnSj_4&vq=hd1080"
+    title="iFly Universidad Aeronáutica"
+    loading="lazy"
+    allow="accelerometer; autoplay; fullscreen;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    class="hidden md:block absolute -top-52 w-[150rem] -left-[20rem] h-[100rem] object-cover -z-50"
+    id="video-iframe"></iframe>
+
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black -z-40"
+  >
+  </div>
 
   <div class="flex w-full max-w-7xl mx-auto px-5">
-    <div class="flex flex-col gap-4 lg:gap-8 mx-auto items-center">
+    <div class="flex flex-col gap-4 lg:gap-8 sm:translate-y-20">
       <h1
-        class="text-4xl max-w-xl lg:text-7xl font-medium text-center lg:max-w-4xl"
-      >
-        {data.title}
-      </h1>
-      <h2
-        class="text-xl max-w-xl lg:text-3xl text-center lg:max-w-2xl text-gray-200"
-      >
+        class="text-4xl max-w-2xl lg:text-7xl font-medium lg:max-w-4xl"
+        set:html={data.title}
+      />
+      <h2 class="text-xl max-w-xl lg:text-3xl lg:max-w-2xl text-gray-200">
         {data.subtitle}
       </h2>
       <div class="flex gap-5 flex-col sm:flex-row">

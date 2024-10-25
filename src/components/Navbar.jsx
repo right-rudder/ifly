@@ -30,11 +30,11 @@ const Navbar = ({ pathname, lang }) => {
   };
 
   const changeBackground = () => {
-    if (window.scrollY >= 60) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
+    // if (window.scrollY >= 60) {
+    //   setNavbar(true);
+    // } else {
+    //   setNavbar(false);
+    // }
   };
 
   useEffect(() => {
@@ -80,10 +80,17 @@ const Navbar = ({ pathname, lang }) => {
   };
 
   return (
-    <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
+    <nav className="w-full h-0 absolute top-0 z-50 tracking-wider">
       <div
         className={`${
           navBar || openMobile
+            ? "bg-main-black/80 backdrop-blur"
+            : "bg-transparent h-0"
+        } duration-300 absolute w-full h-screen top-0 -z-50`}
+      ></div>
+      <div
+        className={`${
+          navBar
             ? "bg-main-black/80 backdrop-blur border-main-black/80"
             : "bg-transparent border-white/20"
         } duration-300`}
@@ -97,7 +104,7 @@ const Navbar = ({ pathname, lang }) => {
               <a href={`${lang === "en" ? "/en" : "/"}`}>
                 <img src={blueLogo.src} alt="iFly logo" className="w-36" />
               </a>
-              <div className="hidden lg:block">
+              <div className="hidden">
                 <ul className="flex gap-5 xl:gap-10 items-center">
                   {navbarLinks.map((item, index) => (
                     <li
@@ -194,7 +201,7 @@ const Navbar = ({ pathname, lang }) => {
               </div>
             </div>
 
-            <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
+            <div className="absolute inset-y-0 right-0 flex items-center ">
               <button
                 type="button"
                 className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
@@ -206,7 +213,7 @@ const Navbar = ({ pathname, lang }) => {
                 <span className="sr-only">Open main menu</span>
 
                 <svg
-                  className={`${openMobile ? "hidden" : "block"} h-6 w-6`}
+                  className={`${openMobile ? "hidden" : "block"} size-6 text-main-blue lg:size-8`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -222,7 +229,7 @@ const Navbar = ({ pathname, lang }) => {
                 </svg>
 
                 <svg
-                  className={`${openMobile ? "block" : "hidden"} h-6 w-6`}
+                  className={`${openMobile ? "hidden" : "hidden"} h-6 w-6`}
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -244,13 +251,13 @@ const Navbar = ({ pathname, lang }) => {
 
       <div
         className={`${
-          openMobile ? "max-h-screen" : "max-h-0 delay-300"
-        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-main-black z-50 top-0`}
+          openMobile ? "max-w-[30rem]" : "max-w-0 delay-300"
+        } overflow-x-hidden duration-300 ease-in-out h-screen absolute w-full lg:w-4/12 bg-main-black z-50 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-end pl-5 pr-[26px] py-6">
           <svg
-            className={`text-white h-6 w-6 cursor-pointer`}
+            className={`text-main-blue h-6 w-6 cursor-pointer`}
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="2.0"
