@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "/src/assets/estudiante-en-ifly-mexico.jpg";
+
+const esData = {
+  title: "La Universidad <br> Principal de Formación <br> de Pilotos de México",
+  subtitle: "Convierte tu amor por volar en una carrera profesional",
+  primaryButtonText: "Regístrate",
+  secondaryButtonText: "Más Información",
+};
+
+const enData = {
+  title: "Mexico's Premier Pilot Training University",
+  subtitle: "Turn your love for flying into a professional career",
+  primaryButtonText: "Register",
+  secondaryButtonText: "Learn More",
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+const lang = Astro.currentLocale === "en" ? "en" : "es";
+---
+
+<header
+  class="relative isolate pt-14 overflow-hidden h-screen sm:h-[60vh] lg:h-screen text-white flex
+    items-center"
+>
+  <Image
+    src={HeroImage}
+    alt="Estudiante en iFly"
+    class="absolute top-0 w-full h-full object-cover -z-50"
+    quality={100}
+  />
+
+  <iframe
+    src="https://www.youtube.com/embed/L9q_TVnSj_4?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=L9q_TVnSj_4&vq=hd1080&start=32"
+    title="iFly Universidad Aeronáutica"
+    loading="eager"
+    allow="accelerometer; autoplay; fullscreen;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin"
+    class="hidden md:block absolute -top-52 w-[150rem] -left-[20rem] h-[100rem] object-cover -z-50"
+    id="video-iframe"></iframe>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black -z-40"
+  >
+  </div>
+
+  <div class="flex w-full max-w-7xl mx-auto px-5">
+    <div class="flex flex-col gap-4 lg:gap-8 sm:translate-y-20">
+      <h1
+        class="text-4xl max-w-2xl lg:text-7xl font-medium lg:max-w-4xl"
+        set:html={data.title}
+      />
+      <h2 class="text-xl max-w-xl lg:text-3xl lg:max-w-2xl text-gray-200">
+        {data.subtitle}
+      </h2>
+      <div class="flex gap-5 flex-col sm:flex-row">
+        <a
+          href={lang === "en" ? "/en/contact" : "/contacto"}
+          class="btn-primary w-full sm:w-fit">{data.primaryButtonText}</a
+        >
+        <a href="#bienvenido" class="btn-secondary w-full sm:w-fit"
+          >{data.secondaryButtonText}</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
