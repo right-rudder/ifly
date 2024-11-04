@@ -13,7 +13,7 @@ const stats = [
   },
   {
     value: 2800,
-    title: "Estudiantes graduados el último año",
+    title: "Estudiantes graduados",
   },
 ];
 
