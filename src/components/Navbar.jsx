@@ -84,9 +84,9 @@ const Navbar = ({ pathname, lang }) => {
       <div
         className={`${
           navBar || openMobile
-            ? "bg-main-black/80 backdrop-blur"
-            : "bg-transparent h-0"
-        } duration-300 absolute w-full h-screen top-0 -z-50`}
+            ? "bg-main-black/80 backdrop-blur w-full"
+            : "bg-transparent w-0"
+        } duration-300 absolute top-0 h-screen -z-50`}
       ></div>
       <div
         className={`${
@@ -457,6 +457,25 @@ const Navbar = ({ pathname, lang }) => {
               </svg>
             </a>
           </div>
+
+          <ul className="flex gap-5 mt-5 text-gray-400">
+            <li>
+              <a
+                href="/"
+                className="border border-transparent p-2 hover:border-gray-400 duration-300"
+              >
+                🇲🇽 Español
+              </a>
+            </li>
+            <li>
+              <a
+                href="/en"
+                className="border border-transparent p-2 hover:border-gray-400 duration-300"
+              >
+                🇺🇸 English
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

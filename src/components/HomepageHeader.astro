@@ -17,6 +17,7 @@ const enData = {
 };
 
 const data = Astro.currentLocale === "en" ? enData : esData;
+const lang = Astro.currentLocale === "en" ? "en" : "es";
 ---
 
 <header
@@ -33,7 +34,7 @@ const data = Astro.currentLocale === "en" ? enData : esData;
   <iframe
     src="https://www.youtube.com/embed/L9q_TVnSj_4?autoplay=1&loop=1&mute=1&iv_load_policy=3&controls=0&disablekb=1&fs=0&playlist=L9q_TVnSj_4&vq=hd1080&start=32"
     title="iFly Universidad Aeronáutica"
-    loading="lazy"
+    loading="eager"
     allow="accelerometer; autoplay; fullscreen;
     clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     referrerpolicy="strict-origin-when-cross-origin"
@@ -54,8 +55,9 @@ const data = Astro.currentLocale === "en" ? enData : esData;
         {data.subtitle}
       </h2>
       <div class="flex gap-5 flex-col sm:flex-row">
-        <a href="/contacto" class="btn-primary w-full sm:w-fit"
-          >{data.primaryButtonText}</a
+        <a
+          href={lang === "en" ? "/en/contact" : "/contacto"}
+          class="btn-primary w-full sm:w-fit">{data.primaryButtonText}</a
         >
         <a href="#bienvenido" class="btn-secondary w-full sm:w-fit"
           >{data.secondaryButtonText}</a
