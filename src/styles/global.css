@@ -4,7 +4,7 @@
 
 @layer components {
   .btn-primary {
-    @apply block text-center font-bold py-4 px-10 bg-main-blue w-fit text-white rounded-full duration-300 hover:bg-main-blue/80;
+    @apply block text-center font-bold py-2 px-10 bg-main-blue w-fit text-white duration-300 hover:bg-main-blue/80;
   }
   .btn-secondary {
     @apply block text-center font-bold py-4 px-10 bg-transparent w-fit border-white border text-white rounded-full duration-300 hover:bg-white/30;
@@ -15,4 +15,25 @@ body {
   font-family: "Fira Sans", sans-serif;
   background-color: black;
   color: white;
+}
+
+h1 {
+  font-family: 'Rokkitt Variable', serif;
+}
+
+.navbar-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+/* Centered navbar when at the top */
+.navbar-top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  background: transparent;
 }
