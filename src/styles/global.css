@@ -37,3 +37,9 @@ h1 {
   z-index: 50;
   background: transparent;
 }
+
+.border-fade {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #343d41 50%, transparent 100%) 1;
+  border-style: solid;
+}
