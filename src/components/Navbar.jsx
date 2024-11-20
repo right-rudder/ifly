@@ -30,11 +30,11 @@ const Navbar = ({ pathname, lang }) => {
   };
 
   const changeBackground = () => {
-    // if (window.scrollY >= 60) {
-    //   setNavbar(true);
-    // } else {
-    //   setNavbar(false);
-    // }
+    if (window.scrollY >= 60) {
+      setNavbar(true); // Sticky navbar when scrolling
+    } else {
+      setNavbar(false); // Centered navbar at the top
+    }
   };
 
   useEffect(() => {
@@ -80,30 +80,98 @@ const Navbar = ({ pathname, lang }) => {
   };
 
   return (
-    <nav className="w-full h-0 absolute top-0 z-50 tracking-wider">
+    <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
-        className={`${
-          navBar || openMobile
-            ? "bg-main-black/80 backdrop-blur w-full"
-            : "bg-transparent w-0"
-        } duration-300 absolute top-0 h-screen -z-50`}
-      ></div>
-      <div
-        className={`${
-          navBar
-            ? "bg-main-black/80 backdrop-blur border-main-black/80"
-            : "bg-transparent border-white/20"
-        } duration-300`}
+        className={`lg:h-28 relative flex h-20 items-center justify-between transition-all ${
+          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto"
+        } duration-500`}
       >
-        <div className="px-5 max-w-7xl mx-auto ">
+        <div className="px-5 w-full">
           <div
-            className={`lg:h-28 relative flex h-20 items-center justify-between transition-all`}
-            id="navbar"
-          >
-            <div className="flex w-full items-center justify-between">
-              <a href={`${lang === "en" ? "/en" : "/"}`}>
-                <img src={blueLogo.src} alt="iFly logo" className="w-36" />
-              </a>
+            className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle gap-5 justify-between transition-all`}
+            id="navbar">
+            <div className={`flex w-full items-center justify-between ${navBar || openMobile ? "invisible" : ""}`}>
+              <div className="hidden lg:flex w-full items-top justify-center">
+              <ul className="flex justify-between align-middle w-8/12 items-top border-fade"> 
+                  {navbarLinks.map((item, index) => (
+                    <li
+                      key={index}
+                      className={`${isActive(item, pathname) ? "decoration-transparent underline font-normal" : "font-thin"} py-5 uppercase tracking-widest relative group`}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                      {item.link ? (
+                        <a
+                          href={item.link}
+                          target={`${item.link.includes("http") ? "_blank" : "_self"}`}
+                          className="font-medium text-lg duration-300 decoration-accent-300 decoration-1 decoration-gradient hover:underline underline-offset-[10px] border-accent whitespace-nowrap"
+                        >
+                          <span className="font-medium block italic  text-white" >
+                            {item.name}
+                          </span>
+                        </a>
+                      ) : (
+                        <span className="font-medium cursor-default text-white text-center text-lg duration-300 hover:underline decoration-accent-300 decoration-1 underline-offset-[10px] py-12 whitespace-nowrap">
+                          {item.name}
+                          <p className="text-main-blue font-bold no-underline">⌄</p>
+                        </span>
+                      )}
+                      {item.submenu && item.submenu.length > 0 && (
+                        <ul
+                          className={`absolute top-16 bg-main-blue border-b-4 border-white whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                        >
+                          {item.submenu.map((subitem, subIndex) => (
+                            <li
+                              key={subIndex}
+                              className={`${isActive(subitem, pathname) ? "scale-110 bg-accent-600 text-white" : ""} relative -skew-x-12 hover:bg-accent-600 hover:scale-110 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
+                              onMouseEnter={() => setSubHoveredIndex(subIndex)}
+                              onMouseLeave={() => setSubHoveredIndex(null)}
+                            >
+                              {subitem.link ? (
+                                <a
+                                  className="p-3 block"
+                                  href={subitem.link}
+                                  target={`${subitem.link.includes("http") ? "_blank" : "_self"}`}
+                                >
+                                  {subitem.name}
+                                </a>
+                              ) : (
+                                <span className="cursor-default p-3 block">
+                                  {subitem.name}
+                                </span>
+                              )}
+
+                              {subitem.subsubmenu &&
+                                subitem.subsubmenu.length > 0 && (
+                                  <ul
+                                    className={`absolute z-20 top-0 bg-primary-400 whitespace-nowrap left-full duration-500 ${subHoveredIndex === subIndex ? "max-h-auto w-auto opacity-100" : "max-h-0 w-0 opacity-0 overflow-hidden"}`}
+                                  >
+                                    {subitem.subsubmenu.map(
+                                      (subsubitem, subsubIndex) => (
+                                        <li
+                                          key={subsubIndex}
+                                          className={`${isActive(subsubitem, pathname) ? "bg-accent" : ""} relative hover:bg-secondary`}
+                                        >
+                                          <a
+                                            href={subsubitem.link}
+                                            target={`${subsubitem.link.includes("http") ? "_blank" : "_self"}`}
+                                            className="block p-3"
+                                          >
+                                            {subsubitem.name}
+                                          </a>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <div className="hidden">
                 <ul className="flex gap-5 xl:gap-10 items-center">
                   {navbarLinks.map((item, index) => (
@@ -201,7 +269,7 @@ const Navbar = ({ pathname, lang }) => {
               </div>
             </div>
 
-            <div className="absolute inset-y-0 right-0 flex items-center ">
+            <div className={`absolute inset-y-0 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
               <button
                 type="button"
                 className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
