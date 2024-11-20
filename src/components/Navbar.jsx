@@ -113,7 +113,11 @@ const Navbar = ({ pathname, lang }) => {
                       ) : (
                         <span className="font-medium cursor-default text-white text-center text-lg duration-300 hover:underline decoration-accent-300 decoration-1 underline-offset-[10px] py-12 whitespace-nowrap">
                           {item.name}
-                          <p className="text-main-blue font-bold no-underline">⌄</p>
+                          <p>
+                            <IoIosArrowForward
+                              className={`relative -right-[40%] text-main-blue size-5 rotate-90`}
+                            />
+                          </p>
                         </span>
                       )}
                       {item.submenu && item.submenu.length > 0 && (
@@ -415,9 +419,8 @@ const Navbar = ({ pathname, lang }) => {
                               subHoveredIndex === subIndex
                                 ? "bg-white rotate-90"
                                 : "bg-main-blue -rotate-90"
-                            } 
-                    `}
-                          >
+                              }`}
+                            >
                             <IoIosArrowForward
                               className={`${
                                 subHoveredIndex === subIndex
