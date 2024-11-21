@@ -88,6 +88,7 @@ const Navbar = ({ pathname, lang }) => {
       >
         <div className="px-5 w-full">
           <a href={`${lang === "en" ? "/en" : "/"}`}
+            alt="iFly logo blue"
             className="absolute left-5 top-5 z-50">
             <img src={blueLogo.src} className="h-10"></img>
           </a>
