@@ -12,6 +12,7 @@ import programs from "../data/programs";
 import ProgramCard from "../components/ProgramCard.astro";
 import studentInHangar from "../assets/estudiante-de-ifly-en-hangar.webp";
 import IndexForm from "../components/IndexForm.astro";
+import PlaneClouds from "../components/PlaneClouds.astro";
 ---
 
 <BaseLayout
@@ -19,8 +20,9 @@ import IndexForm from "../components/IndexForm.astro";
   siteDescription="Bienvenido a iFly, la primera universidad aeronáutica de México. Prepárate para alcanzar tu sueño de volar con carreras para pilotos, oficiales de operaciones, sobrecargos y más. ¡Obtén tu licencia de Piloto Comercial hoy!"
 >
   <HomepageHeader slot="header" />
+  <PlaneClouds />
 
-  <section id="bienvenido" class="scroll-my-24 bg-main-black/5">
+  <section id="bienvenido" class="scroll-my-24 bg-gradient-to-t from-black  to-transparent">
     <div
       class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
     >
