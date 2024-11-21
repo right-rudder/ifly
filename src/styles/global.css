@@ -43,3 +43,7 @@ h1 {
   border-image: linear-gradient(to right, transparent 0%, #343d41 50%, transparent 100%) 1;
   border-style: solid;
 }
+
+.custom-bg-gradient {
+  background: linear-gradient(to bottom, black 0%, rgba(50, 50, 255, 0.25) 50%, black 100%);
+}
