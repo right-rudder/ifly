@@ -87,6 +87,10 @@ const Navbar = ({ pathname, lang }) => {
         } duration-500`}
       >
         <div className="px-5 w-full">
+          <a href={`${lang === "en" ? "/en" : "/"}`}
+            className="absolute left-5 top-5 z-50">
+            <img src={blueLogo.src} className="h-10"></img>
+          </a>
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle gap-5 justify-between transition-all`}
             id="navbar">
