@@ -13,6 +13,8 @@ import ProgramCard from "../components/ProgramCard.astro";
 import studentInHangar from "../assets/estudiante-de-ifly-en-hangar.webp";
 import IndexForm from "../components/IndexForm.astro";
 import PlaneClouds from "../components/PlaneClouds.astro";
+import BgTextureDown from "../assets/bg-texture-down.jpg";
+import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
 ---
 
 <BaseLayout
@@ -22,44 +24,44 @@ import PlaneClouds from "../components/PlaneClouds.astro";
   <HomepageHeader slot="header" />
   <PlaneClouds />
 
-  <section id="bienvenido" class="scroll-my-24 bg-gradient-to-t from-black  to-transparent">
+  <section id="bienvenido" class="scroll-my-24 custom-bg-gradient2 relative overflow-hidden">
+    <Image
+      src={BgTextureDown}
+      alt="Texture used for background"
+      class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
+    />
+
     <div
-      class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
+      class="max-w-[70vw] lg:max-w-[50vw] mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
     >
-      <div class="flex-1 flex justify-center flex-col gap-5">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
+      <div class="flex-1 flex justify-center items-center content-center flex-col gap-5 text-center">
+        <Image
+          src={LogoWhiteNoText}
+          alt="iFly logo in white"
+          class="w-24"
+        />
+        <h2 class="uppercase text-main-blue text-2xl lg:text-4xl font-bold tracking-widest">
           Bienvenido a iFly
         </h2>
-        <h3 class="text-4xl lg:text-5xl">
+        <h3 class="text-xl lg:text-3xl font-bold">
           Somos la primera universidad aeronáutica para pilotos aviadores en
           México
         </h3>
-        <p class="text-main-black/70">
+        <p>
           Te preparamos para ser un profesional en las alturas. Ya sea que optes
           por nuestra carrera de Pro Pilot y obtengas un título de Técnico
           Superior Universitario, o por la licenciatura en Aviation Management
-          (Gestión Aeronáutica) y obtengas un título de Licenciado. Al final de
+          (Gestión Aeronáutica) y obtengas un título de Licenciado. <br/> <br/> Al final de
           las carreras obtendrás la licencia de Piloto Comercial de Ala Fija con
           la que podrás laborar en cualquier área de la aviación civil.
         </p>
-        <a href="/nosotros/historia" class="btn-primary">Sobre Nosotros</a>
-      </div>
-      <div class="flex-1 relative h-fit mr-5">
-        <Image
-          src={students}
-          alt="Estudiante en iFly"
-          class="rounded-xl z-10 relative"
-        />
-        <div
-          class="absolute border-2 border-main-blue translate-x-5 -translate-y-5 rounded-xl inset-0"
-        >
-        </div>
+        <!-- <a href="/nosotros/historia" class="btn-primary">Sobre Nosotros</a> -->
       </div>
     </div>
   </section>
 
   <section class="bg-main-black/5">
-    <div class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4 grid-colors">
       {
         stats.map((stat) => (
           <CounterCard
