@@ -47,3 +47,26 @@ h1 {
 .custom-bg-gradient {
   background: linear-gradient(to bottom, black 0%, rgba(50, 50, 255, 0.25) 50%, black 100%);
 }
+.custom-bg-gradient2 {
+  background: linear-gradient(to bottom, black 0%, transparent 50%, black 100%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);
+}
+
+.grid-colors astro-island nav {
+  background-color: rgba(129,132,147,255);
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.grid-colors astro-island:nth-child(3) nav {
+  background-color: rgba(66,83,99,255);
+}
+
+.grid-colors astro-island:nth-child(4) nav {
+  background-color: rgba(43,57,68,255);
+}
+
+.grid-colors astro-island:nth-child(5) nav {
+  background-color: rgba(32,44,56,255);
+}
+
