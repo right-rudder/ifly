@@ -4,10 +4,10 @@
 
 @layer components {
   .btn-primary {
-    @apply block text-center font-bold py-2 px-10 bg-main-blue w-fit text-white duration-300 hover:bg-main-blue/80;
+    @apply block text-center font-bold py-2 px-10 bg-main-blue w-fit border-blue text-white duration-300 hover:bg-main-blue/80;
   }
   .btn-secondary {
-    @apply block text-center font-bold py-4 px-10 bg-transparent w-fit border-white border text-white rounded-full duration-300 hover:bg-white/30;
+    @apply block text-center font-bold py-2 px-10 bg-transparent w-fit border-blue text-white duration-300 hover:bg-white/30;
   }
 }
 
@@ -54,6 +54,12 @@ h1 {
 .border-blue-r {
   border-right: 8px solid transparent;
   border-image: linear-gradient(to bottom, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
+.border-blue {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #207495 0%, #00a3e4 50%, #207495 100%) 1;
   border-style: solid;
 }
 
