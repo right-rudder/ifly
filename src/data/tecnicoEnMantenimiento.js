@@ -1,6 +1,7 @@
 const tecnicoEnMantenimiento = {
   data: {
     title: "Técnico en Mantenimiento",
+    subTitle: "-Piloto Privado",
     description:
       "Fórmate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
     url: "/carreras/tecnico-en-mantenimiento",
