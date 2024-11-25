@@ -44,11 +44,24 @@ h1 {
   border-style: solid;
 }
 
+.border-blue {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-image: linear-gradient(to right, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
 .custom-bg-gradient {
   background: linear-gradient(to bottom, black 0%, rgba(50, 50, 255, 0.25) 50%, black 100%);
 }
-.custom-bg-gradient2 {
-  background: linear-gradient(to bottom, black 0%, transparent 50%, black 100%),
+
+.custom-bg-gradient-b {
+  background: linear-gradient(to bottom, black 0%, transparent 100%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);
+}
+
+.custom-bg-gradient-t {
+  background: linear-gradient(to top, black 0%, transparent 80%),
               linear-gradient(to right, black 0%, transparent 50%, black 100%);
 }
 

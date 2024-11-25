@@ -14,7 +14,9 @@ import studentInHangar from "../assets/estudiante-de-ifly-en-hangar.webp";
 import IndexForm from "../components/IndexForm.astro";
 import PlaneClouds from "../components/PlaneClouds.astro";
 import BgTextureDown from "../assets/bg-texture-down.jpg";
+import BgTextureUp from "../assets/bg-texture-up.jpg";
 import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
+import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp";
 ---
 
 <BaseLayout
@@ -24,7 +26,7 @@ import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
   <HomepageHeader slot="header" />
   <PlaneClouds />
 
-  <section id="bienvenido" class="scroll-my-24 custom-bg-gradient2 relative overflow-hidden">
+  <section id="bienvenido" class="scroll-my-24 custom-bg-gradient-b relative overflow-hidden">
     <Image
       src={BgTextureDown}
       alt="Texture used for background"
@@ -60,8 +62,22 @@ import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
     </div>
   </section>
 
-  <section class="bg-main-black/5">
-    <div class="mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4 grid-colors">
+  <section class="bg-main-black/5 relative pb-[30vh] custom-bg-gradient-t">
+    <div class="overflow-hidden h-[60vh] relative">
+      <Image
+          src={StudentsHangar}
+          alt="iFly students posing in front of hangar"
+          class="absolute inset-0 object-cover object-center w-full h-full border-blue"
+      />
+    </div>
+    <Image
+      src={BgTextureUp}
+      alt="Texture used for background"
+      class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
+    />
+
+    
+    <div class="relative -top-[60px] mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4 grid-colors">
       {
         stats.map((stat) => (
           <CounterCard
