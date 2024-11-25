@@ -44,10 +44,16 @@ h1 {
   border-style: solid;
 }
 
-.border-blue {
+.border-blue-y {
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   border-image: linear-gradient(to right, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
+.border-blue-r {
+  border-right: 8px solid transparent;
+  border-image: linear-gradient(to bottom, #207495 0%, #00a3e4 50%, #207495 100%) 1;
   border-style: solid;
 }
 
