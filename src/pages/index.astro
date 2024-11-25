@@ -67,7 +67,7 @@ import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp
       <Image
           src={StudentsHangar}
           alt="iFly students posing in front of hangar"
-          class="absolute inset-0 object-cover object-center w-full h-full border-blue"
+          class="absolute inset-0 object-cover object-center w-full h-full border-blue-y"
       />
     </div>
     <Image
@@ -90,105 +90,25 @@ import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp
     </div>
   </section>
 
-  <section class="bg-main-black/5">
-    <div class="max-w-7xl mx-auto px-5 py-24 flex flex-col lg:flex-row gap-20">
-      <div class="flex-1 relative">
-        <Image
-          src={iflyStudents}
-          alt="Estudiante en iFly"
-          class="rounded-xl z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover top-0 left-0"
-        />
-        <Image
-          src={graduatedStudents}
-          alt="Estudiante en iFly"
-          class="rounded-xl mt-10 lg:mt-0 z-10 lg:absolute max-h-72 lg:max-h-none lg:w-80 aspect-square object-cover bottom-0 right-0"
-        />
-        <div
-          class="hidden lg:block lg:absolute inset-20 border-2 border-main-blue rounded-xl"
-        >
-        </div>
-      </div>
-      <div class="flex-1 flex justify-center flex-col gap-5">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
-          ¿Por qué estudiar en iFly?
-        </h2>
-        <h3 class="lg:text-5xl">
-          Te ofrecemos una preparación formidable para cumplir tu sueño de volar
-          profesionalmente
-        </h3>
-        <p class="text-main-black/70">
-          Si tu pasión está en los cielos, iFly es el lugar perfecto para ti.
-          Nuestros programas de estudio están diseñados para que te conviertas
-          en un piloto profesional y puedas trabajar en cualquier área de la
-          aviación civil. iFly te ofrece carreras en:
-        </p>
-        <ul class="grid grid-cols-2 gap-4 text-main-black/70">
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Aviation Management</p>
-          </li>
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Pro Pilot</p>
-          </li>
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Cadet Pilot</p>
-          </li>
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Sobrecargo de aviación</p>
-          </li>
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Oficial de operaciones</p>
-          </li>
-          <li class="flex gap-2 items-center">
-            <div class="p-2 bg-main-black rounded-full">
-              <FaCheck className="size-2 lg:size-3 text-white" />
-            </div>
-            <p class="text-sm lg:text-base">Técnico en mantenimiento</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-main-blue text-white">
+  <section class="text-white relative">
     <div
-      class="max-w-7xl mx-auto px-5 py-24 flex flex-col gap-20 items-center lg:items-stretch"
+      class="max-w-7xl mx-auto px-5 flex flex-col gap-20 items-center relative -top-[130px]"
     >
-      <div class="flex justify-between items-end gap-20">
-        <div class="flex justify-center flex-col gap-5 max-w-xl">
-          <h2 class="uppercase text-main-black font-bold tracking-widest">
-            Nuestras Carreras
-          </h2>
-          <h3 class="text-4xl lg:text-5xl">
-            Conoce nuestros programas de estudio
-          </h3>
-          <p class="lg:text-lg">
-            En iFly te ofrecemos programas de estudio para que te conviertas en
-            un profesional de la aviación civil. Conoce nuestros programas y
-            elige el que más se adapte a tus necesidades.
-          </p>
-        </div>
-        <a
-          href="/por-que-ser-piloto#programas"
-          class="btn-secondary hidden lg:block">Ver Todos</a
-        >
+      <div class="flex flex-col gap-5 max-w-xl justify-center items-center content-center text-center">
+        <h2 class="uppercase font-bold text-main-blue tracking-widest text-xl lg:text-2xl">
+          Nuestras Carreras
+        </h2>
+        <h3 class="lg:text-lg text-main-blue">
+          Conoce nuestros programas de estudio
+        </h3>
+        <p class="lg:text-lg text-left">
+          En iFly te ofrecemos programas de estudio para que te conviertas en
+          un profesional de la aviación civil. Conoce nuestros programas y
+          elige el que más se adapte a tus necesidades.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="flex-col gap-10">
         {
           programs
             .slice(0, 3)
@@ -204,7 +124,7 @@ import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp
       </div>
       <a
         href="/por-que-ser-piloto#programas"
-        class="btn-secondary lg:hidden w-full max-w-lg">Ver Todos</a
+        class="btn-primary w-full max-w-lg">Ver Todos</a
       >
     </div>
   </section>
@@ -226,7 +146,7 @@ import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp
         <h2 class="uppercase text-main-black/80 tracking-widest">
           Testimonial
         </h2>
-        <h3 class="text-lg sm:text-3xl lg:text-5xl">
+        <h3 class="text-lg text-main-black/80 sm:text-3xl lg:text-5xl">
           Conoce la experiencia de nuestros estudiantes
         </h3>
         <quote class="text-main-black/70">
