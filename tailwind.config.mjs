@@ -20,7 +20,7 @@ export default {
       colors: {
         "main-black": "#231f20",
         "main-blue": "#00a3e4",
-        "main-red": "#c82626",
+        "main-accent": "#2b3944",
         "main-purple": "#b252a0",
         "main-orange": "#f58632",
       },
