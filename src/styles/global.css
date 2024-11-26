@@ -106,3 +106,7 @@ h1 {
   background-color: rgba(32,44,56,255);
 }
 
+.filter-opacity-20 {
+  filter: opacity(0.20);
+}
+

@@ -82,7 +82,7 @@ const Navbar = ({ pathname, lang }) => {
   return (
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
-        className={`lg:h-28 relative flex h-20 items-center justify-between transition-all ${
+        className={`lg:h-28 relative flex h-20 items-center justify-between transition-all bg-black/50 lg:bg-transparent ${
           navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto"
         } duration-500`}
       >
