@@ -44,6 +44,12 @@ h1 {
   border-style: solid;
 }
 
+.border-fade-light {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #d3d8da 50%, transparent 100%) 1;
+  border-style: solid;
+}
+
 .border-blue-y {
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
@@ -74,6 +80,11 @@ h1 {
 
 .custom-bg-gradient-t {
   background: linear-gradient(to top, black 0%, transparent 80%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);
+}
+
+.custom-bg-gradient-xy {
+  background: linear-gradient(to top, black 0%, transparent 50%, black 100%),
               linear-gradient(to right, black 0%, transparent 50%, black 100%);
 }
 
