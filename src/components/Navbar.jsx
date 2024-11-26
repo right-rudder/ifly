@@ -101,7 +101,7 @@ const Navbar = ({ pathname, lang }) => {
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
-                      className={`${isActive(item, pathname) ? "decoration-transparent underline font-normal" : "font-thin"} py-5 uppercase tracking-widest relative group`}
+                      className={`${isActive(item, pathname) ? "decoration-transparent underline font-normal" : "font-thin"} py-5 px-2 uppercase tracking-widest relative group`}
                       onMouseEnter={() => setHoveredIndex(index)}
                       onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -111,7 +111,7 @@ const Navbar = ({ pathname, lang }) => {
                           target={`${item.link.includes("http") ? "_blank" : "_self"}`}
                           className="font-medium text-lg duration-300 decoration-accent-300 decoration-1 decoration-gradient hover:underline underline-offset-[10px] border-accent whitespace-nowrap"
                         >
-                          <span className="font-medium block italic  text-white" >
+                          <span className="font-medium block text-white" >
                             {item.name}
                           </span>
                         </a>
@@ -277,6 +277,12 @@ const Navbar = ({ pathname, lang }) => {
                 </ul>
               </div>
             </div>
+
+            <a href={`${lang === "en" ? "/" : "/en"}`}
+              alt="iFly logo blue"
+              className={`absolute inset-y-0 right-0 flex items-center ${navBar || openMobile ? "lg:hidden" : ""}`}>
+              {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
+            </a>
 
             <div className={`absolute inset-y-0 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
               <button
