@@ -279,8 +279,7 @@ const Navbar = ({ pathname, lang }) => {
             </div>
 
             <a href={`${lang === "en" ? "/" : "/en"}`}
-              alt="iFly logo blue"
-              className={`absolute inset-y-0 right-0 flex items-center ${navBar || openMobile ? "lg:hidden" : ""}`}>
+              className={`absolute inset-y-0 right-0 flex items-center invisible lg:visible ${navBar || openMobile ? "lg:hidden" : ""}`}>
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
             </a>
 
