@@ -41,13 +41,13 @@ const data = {
         </div>
       </div>
       <div class="flex-1 flex justify-center flex-col gap-5">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
+        <h2 class="uppercase text-white/80 tracking-widest">
           ¿Por qué convertirte en piloto?
         </h2>
         <h3 class="lg:text-5xl">
           ¿Qué puedes esperar al convertirte en piloto?
         </h3>
-        <p class="text-main-black/70 text-lg">
+        <p class="text-white/70 text-lg">
           En iFly te ofrecemos una formación integral para que te conviertas en
           un piloto profesional. Conoce las ventajas de estudiar en nuestra
           universidad y las oportunidades que te esperan al graduarte.
@@ -58,8 +58,8 @@ const data = {
               <GiPlanetConquest className="text-white size-6" />
             </div>
             <div>
-              <p class="text-main-black/80 text-2xl font-medium">Oportunidad</p>
-              <p class="text-main-black/70 text-lg">
+              <p class="text-white/80 text-2xl font-medium">Oportunidad</p>
+              <p class="text-white/70 text-lg">
                 Graduados de iFly trabajan en aerolíneas de todo el mundo ya que
                 nuestras licencias son reconocidas internacionalmente.
               </p>
@@ -70,8 +70,8 @@ const data = {
               <BsGraphUpArrow className="text-white size-6" />
             </div>
             <div>
-              <p class="text-main-black/80 text-2xl font-medium">Crecimiento</p>
-              <p class="text-main-black/70 text-lg">
+              <p class="text-white/80 text-2xl font-medium">Crecimiento</p>
+              <p class="text-white/70 text-lg">
                 La aviación es una industria en crecimiento y con alta demanda
                 de pilotos profesionales.
               </p>
@@ -82,8 +82,8 @@ const data = {
               <FaTelegramPlane className="text-white size-6" />
             </div>
             <div>
-              <p class="text-main-black/80 text-2xl font-medium">Libertad</p>
-              <p class="text-main-black/70 text-lg">
+              <p class="text-white/80 text-2xl font-medium">Libertad</p>
+              <p class="text-white/70 text-lg">
                 Como piloto tendrás la libertad de volar por todo el mundo y
                 explorar nuevos destinos.
               </p>
@@ -105,7 +105,7 @@ const data = {
         <h2 class="uppercase text-main-black/80 tracking-widest">
           Palabras de nuestros estudiantes
         </h2>
-        <h3 class="text-lg sm:text-3xl lg:text-5xl">
+        <h3 class="text-lg sm:text-3xl text-main-black/90 lg:text-5xl">
           ¿Qué dicen nuestros estudiantes?
         </h3>
         <quote class="text-main-black/70">
@@ -133,10 +133,10 @@ const data = {
     </div>
   </section>
 
-  <section class="bg-main-blue scroll-my-24" id="programas">
+  <section class="scroll-my-24" id="programas">
     <div class="max-w-xl lg:max-w-7xl mx-auto px-5 py-24">
       <div class="text-center flex flex-col gap-5 max-w-3xl mx-auto text-white">
-        <h2 class="uppercase text-main-black/80 tracking-widest">
+        <h2 class="uppercase text-white/80 tracking-widest">
           Nuestras carreras
         </h2>
         <h3 class="text-4xl lg:text-6xl">
@@ -148,7 +148,7 @@ const data = {
           más se adapte a tus necesidades.
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 w-fit mx-auto">
+      <div class="flex-col gap-10 mt-10 w-fit mx-auto">
         {
           programs.map((program) => (
             <ProgramCard
