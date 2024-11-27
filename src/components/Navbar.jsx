@@ -279,11 +279,11 @@ const Navbar = ({ pathname, lang }) => {
             </div>
 
             <a href={`${lang === "en" ? "/" : "/en"}`}
-              className={`absolute inset-y-0 right-0 flex items-center invisible lg:visible ${navBar || openMobile ? "lg:hidden" : ""}`}>
+              className={`absolute top-8 right-0 flex items-center invisible lg:visible ${navBar || openMobile ? "lg:hidden" : ""}`}>
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
             </a>
 
-            <div className={`absolute inset-y-0 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
+            <div className={`absolute top-2 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
               <button
                 type="button"
                 className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
