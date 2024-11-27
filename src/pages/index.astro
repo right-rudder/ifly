@@ -12,7 +12,9 @@ import BgTextureDown from "../assets/bg-texture-down.jpg";
 import BgTextureUp from "../assets/bg-texture-up.jpg";
 import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
 import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp";
-import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion2.jpg";
+import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion.jpg";
+import CTABG from "../assets/ifly-welcome.webp";
+import CTAImage from "../components/CTAImage.astro";
 
 ---
 
@@ -127,15 +129,15 @@ import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion2.jpg";
     </div>
   </section>
 
-  <section class="lg:pb-60 flex flex-col gap-20 items-center relative -top-52 custom-bg-gradient-xy min-h-[100vh] lg:min-h-[87vw] lg:mb-60">
+  <section class="flex flex-col items-center relative -top-52 custom-bg-gradient-xy min-h-[80vh] lg:min-h-[60vw]">
     <Image
       src={TestimonialsBG}
       alt="Estudiante en hangar de iFly"
-      class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
+      class="absolute -z-50 object-cover object-top w-full h-full"
     /> 
     
       <div
-        class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue border-2 p-5 lg:p-14 z-10 absolute bottom-0 overflow-hidden"
+        class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue border-2 p-5 lg:p-14 z-10 absolute -bottom-40 overflow-hidden"
       >
         <Image
           src={LogoWhiteNoText}
@@ -161,6 +163,7 @@ import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion2.jpg";
       </div>
   </section>
 
+  <CTAImage />
   <IndexForm />
 </BaseLayout>
 
