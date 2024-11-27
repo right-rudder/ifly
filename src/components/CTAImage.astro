@@ -1,0 +1,30 @@
+---
+const esData = {
+  title: "Toma el <br> primero paso...",
+  firstParagraph:
+    "Empieza a estudiar hoy en iFly Universidad Aeronáutica<br> y toma el primer paso en tu carrera.",
+};
+
+const enData = {
+  title: "Take the first step...",
+  firstParagraph:
+    "Start studying today at iFly Aeronautical University and take the first step in your career.",
+};
+
+const imageURL = "src/assets/ifly-welcome.webp";
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+---
+
+<section  class="relative -top-52 bg-local bg-top bg-cover h-[120vh] flex flex-col justify-center items-center content-center gap-20" 
+style=`background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.4) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(${imageURL})`
+>
+  <h2 class="font-extrabold text-4xl lg:text-8xl text-white/90 tracking-tight"
+      set:html={data.title}
+  >
+  </h2>
+  <p class="text-xl lg:text-2xl max-w-[90vw] text-white/80"
+      set:html={data.firstParagraph}
+  >
+  </p>
+</section>
