@@ -3,8 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import HomepageHeader from "../../components/HomepageHeader.astro";
 import { Image } from "astro:assets";
 import CounterCard from "../../components/CounterCard";
-import stats from "../../data/stats";
-import programs from "../../data/programs";
+import stats from "../../data/en/stats";
+import programs from "../../data/en/programs";
 import ProgramCard from "../../components/ProgramCard.astro";
 import IndexForm from "../../components/IndexForm.astro";
 import PlaneClouds from "../../components/PlaneClouds.astro";
@@ -13,6 +13,7 @@ import BgTextureUp from "../../assets/bg-texture-up.jpg";
 import LogoWhiteNoText from "../../assets/ifly-logo-white-no-text.png";
 import StudentsHangar from "../../assets/estudiantes-frente-a-hangares-de-ifly.webp";
 import TestimonialsBG from "../../assets/piloto-con-sobrecargos-de-aviacion2.jpg";
+import CTAImage from "../../components/CTAImage.astro";
 
 ---
 
@@ -158,6 +159,7 @@ import TestimonialsBG from "../../assets/piloto-con-sobrecargos-de-aviacion2.jpg
       </div>
   </section>
 
+  <CTAImage />
   <IndexForm />
 </BaseLayout>
 
