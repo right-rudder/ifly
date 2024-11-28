@@ -13,8 +13,8 @@ import BgTextureUp from "../assets/bg-texture-up.jpg";
 import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
 import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp";
 import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion.jpg";
-import CTABG from "../assets/ifly-welcome.webp";
 import CTAImage from "../components/CTAImage.astro";
+import Welcome from "../components/Welcome.astro";
 
 ---
 
@@ -24,8 +24,9 @@ import CTAImage from "../components/CTAImage.astro";
 >
   <HomepageHeader slot="header" />
   <PlaneClouds />
+  <Welcome />
 
-  <section id="bienvenido" class="scroll-my-24 custom-bg-gradient-b relative overflow-hidden">
+  <!-- <section id="bienvenido" class="scroll-my-24 custom-bg-gradient-b relative overflow-hidden">
     <Image
       src={BgTextureDown}
       alt="Texture used for background"
@@ -56,11 +57,11 @@ import CTAImage from "../components/CTAImage.astro";
           las carreras obtendrás la licencia de Piloto Comercial de Ala Fija con
           la que podrás laborar en cualquier área de la aviación civil.
         </p>
-        <!-- <a href="/nosotros/historia" class="btn-primary">Sobre Nosotros</a> -->
+        <a href="/nosotros/historia" class="btn-primary">Sobre Nosotros</a>
       </div>
     </div>
   </section>
-
+ -->
   <section class="bg-main-black/5 relative pb-[30vh] custom-bg-gradient-t">
     <div class="overflow-hidden h-[60vh] relative">
       <Image
