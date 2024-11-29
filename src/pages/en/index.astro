@@ -14,6 +14,8 @@ import LogoWhiteNoText from "../../assets/ifly-logo-white-no-text.png";
 import StudentsHangar from "../../assets/estudiantes-frente-a-hangares-de-ifly.webp";
 import TestimonialsBG from "../../assets/piloto-con-sobrecargos-de-aviacion2.jpg";
 import CTAImage from "../../components/CTAImage.astro";
+import Welcome from "../../components/Welcome.astro";
+import Counters from "../../components/Counters.astro";
 
 ---
 
@@ -21,70 +23,10 @@ import CTAImage from "../../components/CTAImage.astro";
   siteTitle="iFly Aeronautical University - Comprehensive Training for Pilots and Aviation Professionals"
   siteDescription="Welcome to iFly, Mexico's first aeronautical university. Prepare to achieve your dream of flying with programs for pilots, operations officers, flight attendants, and more. Get your Commercial Pilot License today!"
 >
-  <HomepageHeader slot="header" />
-  <PlaneClouds />
-
-  <section id="welcome" class="scroll-my-24 custom-bg-gradient-b relative overflow-hidden">
-    <Image
-      src={BgTextureDown}
-      alt="Texture used for background"
-      class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
-    />
-
-    <div
-      class="max-w-[70vw] lg:max-w-[50vw] mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
-    >
-      <div class="flex-1 flex justify-center items-center content-center flex-col gap-5 lg:text-center">
-        <Image
-          src={LogoWhiteNoText}
-          alt="iFly logo in white"
-          class="w-24"
-        />
-        <h2 class="uppercase text-main-blue text-2xl lg:text-4xl font-bold tracking-widest text-center">
-          Welcome to iFly
-        </h2>
-        <h3 class="text-xl lg:text-3xl font-bold">
-          We are the first aeronautical university for aviator pilots in Mexico
-        </h3>
-        <p>
-          We prepare you to be a professional in the skies. Whether you choose
-          our Pro Pilot program to earn a University Technician degree, or the
-          Aviation Management bachelor's degree and earn a Licentiate degree. <br/> <br/> At the end of
-          these programs, you will obtain the Fixed-Wing Commercial Pilot License,
-          allowing you to work in any area of civil aviation.
-        </p>
-        <!-- <a href="/about-us/history" class="btn-primary">About Us</a> -->
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-main-black/5 relative pb-[30vh] custom-bg-gradient-t">
-    <div class="overflow-hidden h-[60vh] relative">
-      <Image
-          src={StudentsHangar}
-          alt="iFly students posing in front of hangar"
-          class="absolute inset-0 object-cover object-center w-full h-full border-blue-y"
-      />
-    </div>
-    <Image
-      src={BgTextureUp}
-      alt="Texture used for background"
-      class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
-    />
-
-    
-    <div class="relative -top-[60px] mx-auto max-w-7xl grid sm:grid-cols-2 lg:grid-cols-4 grid-colors">
-      {
-        stats.map((stat) => (
-          <CounterCard
-            client:only="react"
-            value={stat.value}
-            title={stat.title}
-          />
-        ))
-      }
-    </div>
-  </section>
+<HomepageHeader slot="header" />
+<PlaneClouds />
+<Welcome />
+<Counters />
 
   <section class="text-white relative z-20">
     <div
