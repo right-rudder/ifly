@@ -1,22 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HomepageHeader from "../components/HomepageHeader.astro";
-import { Image } from "astro:assets";
-import CounterCard from "../components/CounterCard";
-import stats from "../data/stats";
-import programs from "../data/programs";
-import ProgramCard from "../components/ProgramCard.astro";
 import IndexForm from "../components/IndexForm.astro";
 import PlaneClouds from "../components/PlaneClouds.astro";
-import BgTextureDown from "../assets/bg-texture-down.jpg";
-import BgTextureUp from "../assets/bg-texture-up.jpg";
-import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
-import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp";
-import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion.jpg";
 import CTAImage from "../components/CTAImage.astro";
 import Welcome from "../components/Welcome.astro";
 import Counters from "../components/Counters.astro";
 import Carreers from "../components/Carreers.astro";
+import Testimonials from "../components/Testimonials.astro";
 
 ---
 
@@ -29,51 +20,7 @@ import Carreers from "../components/Carreers.astro";
   <Welcome />
   <Counters />
   <Carreers slice={true} />
-
-  <section class="flex flex-col items-center relative -top-52 custom-bg-gradient-xy min-h-[80vh] lg:min-h-[60vw]">
-    <Image
-      src={TestimonialsBG}
-      alt="Estudiante en hangar de iFly"
-      class="absolute -z-50 object-cover object-top w-full h-full"
-    /> 
-    
-      <div
-        class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue border-2 p-5 lg:p-14 z-10 absolute -bottom-40 overflow-hidden"
-      >
-        <Image
-          src={LogoWhiteNoText}
-          alt="iFly logo in white"
-          class="w-44 absolute -left-11 -top-3 -z-50 filter-opacity-20"
-        />
-
-        <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight">
-          Testimonials
-        </h2>
-        <h3 class="lg:text-xl text-main-blue border-fade-light pb-2">
-          Conoce la experiencia de nuestros estudiantes
-        </h3>
-        <quote class="max-w-[60%] text-left flex flex-col">
-          "iFly es la familia que me vió nacer como piloto aviador profesional y
-          me ayudó a cumplir uno de mis más grandes sueños, es para mí un placer
-          y un orgullo haberme formado en esta gran familia."
-          <br/>
-          <cite class="text-right font-semibold">- Roberto Novelo Cicero (Piloto aviador)</cite
-          >
-        </quote>
-
-      </div>
-  </section>
-
+  <Testimonials />
   <CTAImage />
   <IndexForm />
 </BaseLayout>
-
-<!-- <script>
-  const userLang = navigator.language;
-
-  if (userLang.startsWith("en")) {
-    window.location.href = "/en";
-  } else {
-    window.location.href = "/";
-  }
-</script> -->
