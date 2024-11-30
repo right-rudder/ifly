@@ -51,8 +51,8 @@ const data = Astro.currentLocale === "en" ? enData : esData;
       >
       </h3>
       <quote class="max-w-[60%] text-left flex flex-col"
-      set:html={data.quoteText}
       >
+        {data.quoteText}
         <br/>
         <cite class="text-right font-semibold"
         set:html={data.citeText}
