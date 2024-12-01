@@ -15,6 +15,14 @@ import {
   EMAIL_ADDRESS,
 } from "../consts.ts";
 
+const getRelativeLocaleUrl = (locale, pathname) => {
+  const basePath = pathname.replace(/^\/(en|es)/, ''); // Remove existing locale prefixes
+  if (locale === 'es') {
+    return basePath; // No prefix for default locale
+  }
+  return `/${locale}${basePath}`; // Add locale prefix for other languages
+}
+
 const Navbar = ({ pathname, lang }) => {
   const navbarLinks = lang === "en" ? enNavbarLinks : esNavbarLinks;
   const [openMobile, setOpenMobile] = useState(false);
@@ -278,7 +286,10 @@ const Navbar = ({ pathname, lang }) => {
               </div>
             </div>
 
-            <a href={`${lang === "en" ? "/" : "/en"}`}
+            <a 
+              href={lang === "en" 
+                ? getRelativeLocaleUrl('es', pathname) 
+                : getRelativeLocaleUrl('en', pathname)}
               className={`absolute top-8 right-0 flex items-center invisible lg:visible ${navBar || openMobile ? "lg:hidden" : ""}`}>
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
             </a>
@@ -542,7 +553,7 @@ const Navbar = ({ pathname, lang }) => {
           <ul className="flex gap-5 mt-5 text-gray-400">
             <li>
               <a
-                href="/"
+                href={getRelativeLocaleUrl('es', pathname)}
                 className="border border-transparent p-2 hover:border-gray-400 duration-300"
               >
                 🇲🇽 Español
@@ -550,7 +561,7 @@ const Navbar = ({ pathname, lang }) => {
             </li>
             <li>
               <a
-                href="/en"
+                href={getRelativeLocaleUrl('en', pathname)}
                 className="border border-transparent p-2 hover:border-gray-400 duration-300"
               >
                 🇺🇸 English
