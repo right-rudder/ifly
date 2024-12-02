@@ -1,7 +1,7 @@
 const aviationManagement = {
   data: {
     title: "Aviation Management",
-    subTitle: "-Licenciatura",
+    subTitle: "Licenciatura",
     description:
       "La licenciatura en Aviation Management de iFly te prepara para ser un experto en la gestión aeronáutica. Obtén un título de Licenciado en Administración Aeronáutica y amplia tu carrera en la aviación civil.",
     url: "/carreras/aviation-management",
@@ -14,7 +14,7 @@ const aviationManagement = {
       "Esta carrera te forma como profesional en la toma de decisiones de la organización, operación y logística de las aerolíneas y aeropuertos con conocimientos de las áreas administrativas, operacionales, técnicas y logísticas. Logrando desempeñarte como administrador de negocios de transporte aéreo, comercio aéreo, así como también planificación de aeropuertos.",
       "Te formará como piloto de ala fija profesional guiado/a bajo la normatividad y procedimientos para operar una aeronave de manera eficiente y segura con fines privados o comerciales de acuerdo con los reglamentos oficiales vigentes.",
     ],
-    headerImage: "/src/assets/piloto-frente-a-un-cessna.jpg",
+    headerImage: "/src/assets/piloto-frente-a-un-cessna.webp",
     headerAlt: "Piloto frente a un Cessna",
     primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly.webp",
     primaryAlt: "Piloto en cabina de avión de iFly",
