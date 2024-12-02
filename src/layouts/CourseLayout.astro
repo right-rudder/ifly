@@ -6,6 +6,10 @@ import type { ImageMetadata } from "astro";
 import FAQs from "../components/FAQs";
 import { sequence } from "astro:middleware";
 import ProgramForm from "../components/ProgramForm.astro";
+import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
+import CTAImage from "../components/CTAImage.astro";
+import IndexForm from "../components/IndexForm.astro";
+
 
 const { data } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -34,67 +38,68 @@ const enData = {
     "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
 };
 
+const imageURL = "../src/assets/flota.webp";
 const lang = Astro.currentLocale === "en" ? "en" : "es";
 const info = Astro.currentLocale === "en" ? enData : esData;
 ---
-
-<section class="py-12 px-5 bg-main-black/10 lg:pb-60">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
-    <div class="flex-[2_2_0] flex flex-col gap-5">
-      <Image
-        src={images[data.primaryImage]()}
-        alt={data.primaryAlt}
-        class="rounded-xl aspect-video object-cover w-full"
-      />
-      <div class="flex flex-col gap-5 mt-10">
-        <h2 class="text-5xl">{info.title}</h2>
+<>
+  <section class="flex flex-col">
+    <div class="lg:mx-32 my-12">
+      <div class="mx-auto max-w-[80vw] grid grid-cols-1 lg:grid-cols-3 course-grid-colors">
         {
-          data.intro.map((intro) => (
-            <p class="lg:text-lg" set:html={intro} />
+          data.faqs.map((q) => (
+            <nav>
+              <div class="bg-dark-blue flex flex-col py-10 group w-full h-full">
+                <div class="border-r border-white/20 px-10 flex flex-col items-center group-last:border-0 w-full h-full">
+                  <span class="text-xl md:text-2xl text-main-blue font-semibold">
+                    {q.question}
+                  </span>
+                  <h2 class="text-lg my-auto"
+                    set:html={q.answer}
+                  >
+                  </h2>
+                </div>
+              </div>
+            </nav>
           ))
         }
       </div>
-      <FAQs faqs={data.faqs} lang={lang} client:visible />
+      <div class="flex flex-col mx-auto w-full bg-[rgba(16,79,132,255)] relative -top-24 -z-10 overflow-hidden">
+        <Image
+          src={LogoWhiteNoText}
+          alt="iFly logo in white"
+          class="w-72 absolute -left-11 top-36 -z-50 filter-opacity-20"
+        />
+
+        <div class="flex flex-col w-11/12 lg:w-6/12 mx-auto my-32 gap-4">
+          <h3
+            class="text-center text-2xl lg:text-4xl font-semibold"
+            set:html={info.sidebarTitle}
+          >
+          </h3>
+          <ul>
+            {
+              data.prerequisites.map((step) => (
+                <li class="flex items-center gap-2 w-8/12 mx-auto text-lg">
+                  <FaDotCircle className="text-main-blue size-3 shrink-0" />
+                  <div set:html={step} />
+                </li>
+              ))
+            }
+          </ul>
+          <br/>
+          <h3
+            class="text-center text-2xl lg:text-4xl font-semibold"
+            set:html={info.sidebarTitle2}
+          >
+          </h3>
+          <p class="text-xl px-8">
+            {info.sidebarText}
+          </p>
+      </div>
+      </div>
     </div>
-    <aside class="flex-1 flex flex-col gap-10 max-w-xl mx-auto">
-      <div class="bg-white rounded-xl p-10 flex flex-col gap-5 shadow-sm">
-        <h4 class="text-3xl text-main-black">{info.sidebarTitle}</h4>
-        <hr />
-        <ul class="flex flex-col gap-2 my-3">
-          {
-            data.prerequisites.map((step) => (
-              <li class="flex items-center gap-2 text-main-black/80">
-                <FaDotCircle className="text-main-blue size-3 shrink-0" />
-                <div set:html={step} />
-              </li>
-            ))
-          }
-        </ul>
-        <p class="font-medium text-main-black">
-          {info.sidebarNote}
-        </p>
-        <a href="#sign-up-form" class="btn-primary w-full"
-          >{info.primaryButton}</a
-        >
-      </div>
-
-      <div class="bg-white rounded-xl p-10 flex flex-col gap-5 shadow-sm">
-        <div class="bg-main-blue w-fit rounded-full p-3">
-          <IoMdAirplane className="size-10 text-main-black" />
-        </div>
-        <h4 class="text-3xl text-main-black">{info.sidebarTitle2}</h4>
-        <hr />
-        <p class="text-main-black/80 lg:text-lg">
-          {info.sidebarText}
-        </p>
-        <a
-          href="/contacto"
-          class="btn-secondary w-full border-main-black text-main-black hover:bg-main-black/10"
-          >{info.secondaryButton}</a
-        >
-      </div>
-    </aside>
-  </div>
-</section>
-
-<ProgramForm programTitle={data.title} />
+  <section/>
+  <CTAImage imgURL={imageURL}/>
+  <IndexForm />
+</>
