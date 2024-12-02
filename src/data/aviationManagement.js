@@ -33,17 +33,17 @@ const aviationManagement = {
       {
         question: "¿Cuál es la duración de la carrera?",
         answer:
-          "6 semestres: <ul className='list-disc ml-5'><li>Primer y segundo semestre teoría piloto privado</li><li>Tercer y cuarto semestre teoría piloto comercial</li><li>Quinto y sexto semestre licenciado en gestión aeronáutica</li></ul>",
+          "6 semestres: <ul className='list-disc ml-5'><li>• Primero y segundo semestre teoría piloto privado</li><li>• Tercero y cuarto semestre teoría piloto comercial</li><li>• Quinto y sexto semestre licenciado en gestión aeronáutica</li></ul>",
       },
       {
         question: "¿Qué incluye la carrera?",
         answer:
-          "<ul className='list-disc ml-5'><li>Teoría</li><li>182 horas de vuelo</li><li>50 horas de simulador</li><li>40 horas simulador A320</li></ul>",
+          "<ul className='list-disc ml-5'><li>• Teoría</li><li>• 182 horas de vuelo</li><li>• 50 horas de simulador</li><li>• 40 horas simulador A320</li></ul>",
       },
       {
         question: "¿Qué credenciales obtengo al finalizar la carrera?",
         answer:
-          "<ul className='list-disc ml-5'><li>Licencia de piloto comercial de ala fija</li><li>Título técnico superior universitario en piloto aviador comercial</li><li>Cédula profesional de piloto aviador comercial</li><li>Titulo licenciado en gestión aeronáutica</li></ul>",
+          "<ul className='list-disc ml-5'><li>• Licencia de piloto comercial de ala fija</li><li>• Título técnico superior universitario en piloto aviador comercial</li><li>• Cédula profesional de piloto aviador comercial</li><li>• Titulo licenciado en gestión aeronáutica</li></ul>",
       },
     ],
   },
