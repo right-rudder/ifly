@@ -1,13 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HomepageHeader from "../components/HomepageHeader.astro";
-import IndexForm from "../components/IndexForm.astro";
 import PlaneClouds from "../components/PlaneClouds.astro";
-import CTAImage from "../components/CTAImage.astro";
 import Welcome from "../components/Welcome.astro";
 import Counters from "../components/Counters.astro";
 import Carreers from "../components/Carreers.astro";
 import Testimonials from "../components/Testimonials.astro";
+import CTAImage from "../components/CTAImage.astro";
+import IndexForm from "../components/IndexForm.astro";
+
+const imageURL = "src/assets/ifly-welcome.webp";
 
 ---
 
@@ -21,6 +23,6 @@ import Testimonials from "../components/Testimonials.astro";
   <Counters />
   <Carreers slice={true} />
   <Testimonials />
-  <CTAImage />
+  <CTAImage imgURL={imageURL}/>
   <IndexForm />
 </BaseLayout>
