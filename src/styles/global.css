@@ -106,6 +106,18 @@ h1 {
   background-color: rgba(32,44,56,255);
 }
 
+.course-grid-colors nav:nth-child(1) {
+  background-color: rgba(66,83,99,255);
+}
+
+.course-grid-colors nav:nth-child(2) {
+  background-color: rgba(43,57,68,255);
+}
+
+.course-grid-colors nav:nth-child(3) {
+  background-color: rgba(32,44,56,255);
+}
+
 .filter-opacity-20 {
   filter: opacity(0.20);
 }
