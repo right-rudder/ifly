@@ -50,7 +50,7 @@ const info = Astro.currentLocale === "en" ? enData : esData;
         <h2 class="text-5xl">{info.title}</h2>
         {
           data.intro.map((intro) => (
-            <p class="text-main-black/80 lg:text-lg" set:html={intro} />
+            <p class="lg:text-lg" set:html={intro} />
           ))
         }
       </div>
@@ -70,7 +70,7 @@ const info = Astro.currentLocale === "en" ? enData : esData;
             ))
           }
         </ul>
-        <p class="font-medium">
+        <p class="font-medium text-main-black">
           {info.sidebarNote}
         </p>
         <a href="#sign-up-form" class="btn-primary w-full"
@@ -82,7 +82,7 @@ const info = Astro.currentLocale === "en" ? enData : esData;
         <div class="bg-main-blue w-fit rounded-full p-3">
           <IoMdAirplane className="size-10 text-main-black" />
         </div>
-        <h4 class="text-3xl">{info.sidebarTitle2}</h4>
+        <h4 class="text-3xl text-main-black">{info.sidebarTitle2}</h4>
         <hr />
         <p class="text-main-black/80 lg:text-lg">
           {info.sidebarText}
