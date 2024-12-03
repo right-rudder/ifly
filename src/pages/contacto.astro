@@ -23,12 +23,15 @@ const data = {
   headerAlt: "Avión de iFly sobre las nubes",
   title: "Contáctanos",
 };
+const imgURL = "/src/assets/bg-clouds-from-above.webp";
 ---
 
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
   <ContactUsHeader slot="header" data={data} />
 
-  <section class="relative lg:py-60 lg:bg-main-black/5">
+  <section class="relative lg:py-60 lg:bg-main-black/5 bg-cover bg-no-repeat"
+    style=`background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%), url(${imgURL})`
+  >
     <div
       class="max-w-xl lg:max-w-6xl mx-auto text-main-black/90 rounded-2xl lg:shadow-md px-5 py-10 lg:p-20 lg:absolute bottom-24 left-10 right-10 bg-white"
     >
