@@ -17,7 +17,7 @@ const data = Astro.currentLocale === "en" ? enData : esData;
 ---
 
 <section  class="relative -top-52 bg-local bg-top bg-cover h-[120vh] flex flex-col justify-center items-center content-center gap-20" 
-style=`background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.4) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(${imgURL})`
+style=`background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.7) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(${imgURL})`
 >
   <h2 class="font-extrabold text-4xl lg:text-8xl text-white/90 tracking-tight"
       set:html={data.title}
