@@ -13,23 +13,23 @@ if (!images[data.headerImage]) {
 ---
 
 <header
-  class="relative isolate pt-14 overflow-hidden h-[40vh] lg:h-[85vh] text-white flex
-    items-center"
+  class="relative isolate pt-14 overflow-hidden min-h-fit h-[40vh] lg:h-[85vh] text-white flex
+    items-center bg-bottom bg-cover"
+  style=`background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.5) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(${data.headerImage})`
 >
-  <Image
-    src={images[data.headerImage]()}
-    alt={data.headerAlt}
-    class="absolute top-0 w-full h-full object-cover -z-50"
-  />
-
-  <div class="absolute inset-0 bg-main-black/60 -z-40"></div>
   <div
-    class="flex w-full max-w-7xl mx-auto px-5 font-medium flex-col gap-4 lg:gap-8"
+    class="flex flex-col items-center gap-4 lg:gap-8 sm:translate-y-20 mx-auto"
   >
     <h1
-      class="text-5xl tracking-wider max-w-xl lg:text-7xl font-extrabold lg:max-w-4xl text-center mx-auto lg:mb-40"
+      class="text-4xl max-w-2xl text-center font-semibold lg:text-8xl lg:max-w-4xl"
+      set:html={data.title}
+    />
+    <h2 class="text-3xl font-serif max-w-xl lg:text-5xl lg:max-w-2xl text-gray-200">
+      ::::::::
+    </h2>
+    <p class="text-md lg:text-lg w-[40vw] text-center"
+      set:html={data.text}
     >
-      {data.title}
-    </h1>
+    </p>
   </div>
 </header>
