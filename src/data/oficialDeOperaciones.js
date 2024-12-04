@@ -13,7 +13,7 @@ const oficialDeOperaciones = {
     intro: [
       "En esta carrera desarrollarás tus conocimientos y habilidades como oficial de operaciones aéreas. El curso te permitirá desempeñar funciones como despachador de aeronaves logrando mantener los estándares de seguridad operacional de las aeronaves en relación con su peso y balance, combustible e itinerarios bajo los lineamientos y regulaciones aplicables con profesionalismo y excelencia.",
     ],
-    headerImage: "/src/assets/oficial-de-operaciones-en-hangares-de-ifly.webp",
+    headerImage: "images/oficial-de-operaciones-en-hangares-de-ifly.webp",
     headerAlt: "Oficial de operaciones en hangares de iFly",
     primaryImage: "/src/assets/oficial-de-operaciones-operando.webp",
     primaryAlt: "Oficial de operaciones operando",
