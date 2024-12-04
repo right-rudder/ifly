@@ -1,7 +1,7 @@
 const proPilot = {
   data: {
     title: "Pro Pilot",
-    subTitle: "-Técnico Superior",
+    subTitle: "Técnico Superior",
     description:
       "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
     url: "/carreras/pro-pilot",

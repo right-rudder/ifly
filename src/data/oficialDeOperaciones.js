@@ -1,7 +1,7 @@
 const oficialDeOperaciones = {
   data: {
     title: "Oficial de Operaciones",
-    subTitle: "-Dispatcher",
+    subTitle: "Dispatcher",
     description:
       "Conviértete en Oficial de Operaciones con la formación especializada de iFly. Gestiona la seguridad de vuelo y conoce las normativas internacionales para un desarrollo profesional en la aviación civil.",
     url: "/carreras/oficial-de-operaciones",

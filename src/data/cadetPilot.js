@@ -1,7 +1,7 @@
 const cadetPilot = {
   data: {
     title: "Cadet Pilot",
-    subTitle: "-Piloto Privado",
+    subTitle: "Piloto Privado",
     description:
       "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
     url: "/carreras/cadet-pilot",
