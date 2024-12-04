@@ -12,7 +12,7 @@ const sobrecargoDeAviacion = {
     intro: [
       "En esta carrera obtendrás los conocimientos y fundamentos para desempeñar como sobrecargo de aviación. La carrera te enseñará a desempeñar funciones como tripulante de cabina logrando mantener los estándares de seguridad y confort de los pasajeros en ámbito nacional e internacional bajo los lineamientos y regulaciones aplicables de forma eficiente y proactiva.",
     ],
-    headerImage: "/src/assets/piloto-con-sobrecargos-de-aviacion.jpg",
+    headerImage: "images/piloto-con-sobrecargos-de-aviacion.webp",
     headerAlt: "Piloto con sobrecargos de aviación",
     primaryImage:
       "/src/assets/sobrecargo-de-aviacion-frente-a-un-pipistrel.jpg",

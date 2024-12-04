@@ -1,7 +1,7 @@
 const proPilot = {
   data: {
     title: "Pro Pilot",
-    subTitle: "-Técnico Superior",
+    subTitle: "Técnico Superior",
     description:
       "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
     url: "/carreras/pro-pilot",
@@ -12,7 +12,7 @@ const proPilot = {
     intro: [
       "Esta carrera te formará como piloto aviador comercial de ala fija profesional que se guía por estándares altos y conocimientos precisos y actuales para operar una aeronave de manera eficiente y segura con fines privados o comerciales de acuerdo con los reglamentos oficiales vigentes.",
     ],
-    headerImage: "/src/assets/piloto-en-cabina-de-avion-ifly-2.webp",
+    headerImage: "images/piloto-en-cabina-de-avion-ifly-2.webp",
     headerAlt: "Piloto en cabina de avión de iFly",
     primaryImage: "/src/assets/pilotos-de-avion-en-cabina.jpg",
     primaryAlt: "Piotos de avión en cabina preparándose para despegar",
