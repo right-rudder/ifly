@@ -31,14 +31,14 @@ const data = {
   address_1: `Edificio Plaza Península`,
   address_2: `Prolongación Paseo de Montejo x calle 47, Benito Juárez Nte. Mérida, Yucatán, México`,
 };
-const imgURL = "images/bg-clouds-from-above.webp";
+const imgURL = "/src/assets/bg-clouds-from-above.webp";
 ---
 
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
   <ContactUsHeader slot="header" data={data} />
 
   <div class="absolute h-[350vh] w-full bg-cover -z-50"
-    style=`background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url(./${imgURL})`
+    style=`background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url(${imgURL})`
   ></div>
 
   <section class="relative lg:bg-main-black/5"

@@ -1,7 +1,7 @@
 const tecnicoEnMantenimiento = {
   data: {
     title: "Técnico en Mantenimiento",
-    subTitle: "Piloto Privado",
+    subTitle: "-Piloto Privado",
     description:
       "Fórmate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
     url: "/carreras/tecnico-en-mantenimiento",
@@ -14,7 +14,7 @@ const tecnicoEnMantenimiento = {
       "En esta carrera desarrollarás técnicas y habilidades, así como adquisición de conocimientos para desempeñar como técnico en mantenimiento de aeronaves ligeras de motor recíproco. La carrera te permitirá desempeñar como mecánico de aeronaves logrando mantener los estándares de seguridad y el óptimo funcionamiento de las aeronaves en relación con su tren motriz, estructura, sistemas y aviónica bajo los lineamientos y regulaciones aplicables.",
     ],
     headerImage:
-      "images/tecnico-de-mantenimiento-arreglando-un-cessna.webp",
+      "/src/assets/tecnico-de-mantenimiento-arreglando-un-cessna.jpg",
     headerAlt: "Técnico de mantenimiento arreglando un Cessna",
     primaryImage:
       "/src/assets/tecnicos-de-mantenimiento-empujando-avion-hacia-el-hangar.jpg",
