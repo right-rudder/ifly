@@ -78,7 +78,7 @@ const GeneralFAQs = ({ lang }) => {
 
   return (
     <div className="flex flex-col gap-5 max-w-3xl mt-10 lg:mt-0 mx-5">
-      <h2 className="uppercase text-main-black/80 tracking-widest text-center">
+      <h2 className="uppercase text-white/80 tracking-widest text-center">
         FAQ's
       </h2>
       <h3 className="text-4xl lg:text-6xl mx-auto text-center mb-5">
@@ -89,7 +89,7 @@ const GeneralFAQs = ({ lang }) => {
           <div key={index} className="border-b border-main-black/30 pb-2">
             <button
               onClick={() => toggleFAQ(index)}
-              className="text-2xl w-full text-left flex justify-between py-3 text-main-black/90 hover:text-main-blue"
+              className="text-2xl w-full text-left flex justify-between py-3 text-white/90 hover:text-main-blue"
             >
               {faq.question}
               <IoIosArrowForward
@@ -103,7 +103,7 @@ const GeneralFAQs = ({ lang }) => {
                 openQuestions[index] ? "max-h-60" : "max-h-0"
               }`}
             >
-              <div className="text-main-black/60 text-xl pl-5">
+              <div className="text-white/60 text-xl pl-5">
                 {parse(faq.answer)}
               </div>
             </div>
