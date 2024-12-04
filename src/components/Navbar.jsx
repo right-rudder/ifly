@@ -135,12 +135,12 @@ const Navbar = ({ pathname, lang }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute top-16 bg-main-blue/80 whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
+                          className={`absolute overflow-hidden top-16 bg-main-blue/80 whitespace-nowrap text-primary-950 -left-4 duration-200 ease-out ${hoveredIndex === index ? "max-h-auto w-auto opacity-100" : "max-h-0 h-0 opacity-0 overflow-hidden"}`}
                         >
                           {item.submenu.map((subitem, subIndex) => (
                             <li
                               key={subIndex}
-                              className={`${isActive(subitem, pathname) ? "scale-105 bg-black/10 text-white" : ""} relative hover:bg-black/10 hover:scale-105 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
+                              className={`${isActive(subitem, pathname) ? "scale-105 bg-black/10 text-white" : ""} relative hover:bg-black/10 overflow-hidden hover:scale-105 duration-200 px-3 hover:font-medium hover:shadow-sm drop-shadow-sm font-medium hover:text-white`}
                               onMouseEnter={() => setSubHoveredIndex(subIndex)}
                               onMouseLeave={() => setSubHoveredIndex(null)}
                             >
@@ -216,7 +216,7 @@ const Navbar = ({ pathname, lang }) => {
                       )}
                       {item.submenu && item.submenu.length > 0 && (
                         <ul
-                          className={`absolute z-10 top-12 bg-main-black rounded-xl overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
+                          className={`absolute z-10 top-12 bg-main-black  overflow-hidden whitespace-nowrap text-white left-0 duration-500 ${
                             hoveredIndex === index
                               ? "h-auto w-auto opacity-100"
                               : "h-0 w-0 opacity-0 overflow-hidden"
