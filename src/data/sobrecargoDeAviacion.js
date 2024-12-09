@@ -1,6 +1,7 @@
 const sobrecargoDeAviacion = {
   data: {
     title: "Sobrecargo de Aviación",
+    subTitle: "Cabin Crew",
     description:
       "Fórmate como Sobrecargo de Aviación en iFly. Aprende todos los procedimientos y normas de seguridad para ser un sobrecargo certificado, con reconocimiento nacional e internacional.",
     url: "/carreras/sobrecargo-de-aviacion",

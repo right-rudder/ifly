@@ -30,18 +30,22 @@ if (!images[imagePath]) {
     class="flex flex-col py-8 gap-3 justify-between h-full lg:w-[30vw] lg:h-[50vh] bg-main-accent px-8"
   >
     <div class="flex flex-col gap-3">
-      <h3 class="text-2xl lg:text-3xl font-semibold leading-tight">
+      <h3 class="word-clamp text-2xl lg:text-3xl font-semibold leading-tight">
         {title}
       </h3>
-      <h3 class="text-2xl lg:text-3xl leading-tight -skew-x-12">
-        {subTitle}
-      </h3>
-      <p class="line-clamp-3 lg:text-lg">{description}</p>
+      {
+        subTitle?.length > 0 && (
+          <h3 class="word-clamp text-2xl lg:text-3xl leading-tight -skew-x-12">
+            - {subTitle}
+          </h3>
+        )
+      }
+      <p class="line-clamp-5 lg:text-lg">{description}</p>
     </div>
     <div class="flex flex-wrap gap-8 items-center mt-7">
       <a href=`${url}#sign-up-form` class="btn-primary"
-        >{data.primaryButtonText}</a
-      >
+        >{data.primaryButtonText}
+      </a>
       <a
         href={url}
         class="btn-secondary"

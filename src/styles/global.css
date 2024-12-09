@@ -137,3 +137,22 @@ li {
   border-image: linear-gradient(to right, transparent 20%, #00a3e4 50%, transparent 80%) 1;
   border-style: solid;
 }
+
+#full-programs {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#full-programs.visible {
+  max-height: 5000px; /* or a large value to allow all content to show */
+}
+
+.word-clamp {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden
+}
+
