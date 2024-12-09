@@ -1,6 +1,6 @@
 export const navbarLinks = [
   {
-    name: "¿Por qué ser piloto?",
+    name: "Inicio",
     link: "/por-que-ser-piloto",
     submenu: [],
   },
@@ -47,20 +47,24 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "¿Quiénes somos?",
+    name: "Quiénes somos",
     submenu: [
       {
-        name: "Historia",
+        name: "Filosofia",
         link: "/nosotros/historia",
       },
-      {
-        name: "Equipo",
-        link: "/nosotros/equipo",
-      },
-      {
-        name: "Campus",
-        link: "/nosotros/campus",
-      },
+      // {
+      //   name: "Historia",
+      //   link: "/nosotros/historia",
+      // },
+      // {
+      //   name: "Equipo",
+      //   link: "/nosotros/equipo",
+      // },
+      // {
+      //   name: "Campus",
+      //   link: "/nosotros/campus",
+      // },
       {
         name: "Blog",
         link: "/blog",

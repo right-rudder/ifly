@@ -90,22 +90,22 @@ const Navbar = ({ pathname, lang }) => {
   return (
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
-        className={`lg:h-28 relative flex h-20 items-center justify-between transition-all bg-black/50 lg:bg-transparent ${
-          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto"
+        className={`relative flex h-20 items-center justify-between transition-all bg-black/50 ${
+          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto bg-stripes bg-cover"
         } duration-500`}
       >
         <div className="px-5 w-full">
           <a href={`${lang === "en" ? "/en" : "/"}`}
             alt="iFly logo blue"
             className="absolute left-5 top-5 z-50">
-            <img src={blueLogo.src} className="h-10"></img>
+            <img src={whiteLogo.src} className="h-10"></img>
           </a>
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle gap-5 justify-between transition-all`}
             id="navbar">
             <div className={`flex w-full items-center justify-between ${navBar || openMobile ? "invisible" : ""}`}>
               <div className="hidden lg:flex w-full items-top justify-center">
-              <ul className="flex justify-between align-middle w-8/12 items-top border-fade"> 
+              <ul className="flex justify-between align-middle w-8/12 items-top"> 
                   {navbarLinks.map((item, index) => (
                     <li
                       key={index}
@@ -286,13 +286,13 @@ const Navbar = ({ pathname, lang }) => {
               </div>
             </div>
 
-            <a 
+            {/* <a 
               href={lang === "en" 
                 ? getRelativeLocaleUrl('es', pathname) 
                 : getRelativeLocaleUrl('en', pathname)}
               className={`absolute top-8 right-0 flex items-center invisible lg:visible ${navBar || openMobile ? "lg:hidden" : ""}`}>
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
-            </a>
+            </a> */}
 
             <div className={`absolute top-2 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
               <button
