@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import TestimonialsBG from "../assets/piloto-con-sobrecargos-de-aviacion.jpg";
+import TestimonialsBG from "../assets/ifly-admin-crew.webp";
 import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
 
 const esData = {
-  h2text: "Testimonios",
+  h2text: "Testimoniales",
   h3text: "Conoce la experiencia de nuestros estudiantes",
   quoteText: `"iFly es la familia que me vió nacer como piloto aviador profesional y
         me ayudó a cumplir uno de mis más grandes sueños, es para mí un placer
@@ -25,15 +25,24 @@ const data = Astro.currentLocale === "en" ? enData : esData;
 
 ---
 
-<section class="flex flex-col items-center relative -top-52 custom-bg-gradient-xy min-h-[80vh] lg:min-h-[60vw]">
+<section class="flex flex-col items-center relative top-0 custom-bg-gradient-xy min-h-[80vh] lg:min-h-[60vw]">
   <Image
     src={TestimonialsBG}
     alt="Estudiante en hangar de iFly"
-    class="absolute -z-50 object-cover object-top w-full h-full"
+    class="object-cover object-center w-full h-[85vh]"
   /> 
-  
+  <div class="flex-1 flex flex-col gap-2 justify-center items-center content-center text-center">
+    <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight mt-5"
+      set:html={data.h2text}
+    >
+        
+    </h2>
+    <h3 class="lg:text-xl text-main-blue border-fade-light pb-1 mb-5"
+      set:html={data.h3text}
+    >
+    </h3>
     <div
-      class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue border-2 p-5 lg:p-14 z-10 absolute -bottom-40 overflow-hidden"
+      class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue p-5 lg:p-14 z-10 relative overflow-hidden"
     >
       <Image
         src={LogoWhiteNoText}
@@ -41,15 +50,6 @@ const data = Astro.currentLocale === "en" ? enData : esData;
         class="w-44 absolute -left-11 -top-3 -z-50 filter-opacity-20"
       />
 
-      <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight"
-          set:html={data.h2text}
-      >
-        
-      </h2>
-      <h3 class="lg:text-xl text-main-blue border-fade-light pb-2"
-          set:html={data.h3text}
-      >
-      </h3>
       <quote class="max-w-[60%] text-left flex flex-col"
       >
         {data.quoteText}
@@ -61,5 +61,6 @@ const data = Astro.currentLocale === "en" ? enData : esData;
       </quote>
 
     </div>
+  </div>
 </section>
 
