@@ -4,7 +4,7 @@ import ProgramCard from "./TestimonialsCard.astro";
 const { content } = Astro.props;
 ---
 
-<section class="bg-gray-200 py-16 lg:py-24 overflow-hidden">
+<section class="py-8 overflow-hidden">
   <div class="">
     {
       content.upperHeading && (
@@ -15,31 +15,30 @@ const { content } = Astro.props;
     }
     {
       content.heading && (
-        <h2 class="mx-auto mb-3 font-bebas text-4xl lg:text-6xl lg:max-w-3xl text-center font-bold tracking-tight text-primary-800">
+        <h2 class="mx-auto mb-3 font-sans text-3xl lg:text-4xl lg:max-w-3xl text-center font-bold tracking-tight text-main-blue uppercase">
           {content.heading}
         </h2>
       )
     }
     {
       content.heading && (
-        <p class="mx-auto mb-12 text-lg max-w-3xl text-center tracking-loose text-muted-700">
+        <p class="mx-auto mb-5 text-lg lg:text-xl max-w-3xl text-center tracking-loose text-main-blue">
           {content.description}
         </p>
       )
     }
   </div>
   <div class="slider-row">
-    <div class="swiper creativeSwiper magic-cursor w-full h-full">
+    <div class="swiper creativeSwiper magic-cursor w-11/12 h-full">
       <div class="swiper-wrapper pb-8">
         {
           content.cards.map((program) => (
             <div class="swiper-slide">
               <ProgramCard
-                title={program.title}
+                quoteText={program.quoteText}
+                citeText={program.citeText}
                 imagePath={program.imagePath}
                 imageAlt={program.imageAlt}
-                link={program.link}
-                description={program.description}
               />
             </div>
           ))
