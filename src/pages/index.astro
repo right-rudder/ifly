@@ -5,7 +5,7 @@ import PlaneClouds from "../components/PlaneClouds.astro";
 import Welcome from "../components/Welcome.astro";
 import Counters from "../components/Counters.astro";
 import Carreers from "../components/Carreers.astro";
-import Testimonials from "../components/Testimonials.astro";
+import TestimonialsBanner from "../components/TestimonialsBanner.astro";
 import CTAImage from "../components/CTAImage.astro";
 import IndexForm from "../components/IndexForm.astro";
 import TestimonialsSwiper from "../components/TestimonialsSwiper.astro";
@@ -24,9 +24,9 @@ const imageURL = "images/ifly-welcome.webp";
   <Welcome />
   <Counters />
   <Carreers />
-  <Testimonials />
-  <!-- <TestimonialsSwiper content={testimonialsSwiper} /> -->
+  <TestimonialsBanner />
+  <TestimonialsSwiper content={testimonialsSwiper} />
   <CTAImage imgURL={imageURL}/>
   <IndexForm />
-  <!-- <script src="../scripts/creativeSwiper.js"></script> -->
+  <script src="../scripts/creativeSwiper.js"></script>
 </BaseLayout>
