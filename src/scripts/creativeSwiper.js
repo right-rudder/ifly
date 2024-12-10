@@ -7,13 +7,13 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".creativeSwiper", {
     watchSlidesProgress: true,
-    slidesPerView: 4,
+    slidesPerView: 3,
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-      delay: 1800,
+      delay: 3000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -31,16 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       1200: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
     },
     effect: "slide",
