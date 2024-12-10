@@ -1,7 +1,7 @@
 export const navbarLinks = [
   {
     name: "Inicio",
-    link: "/por-que-ser-piloto",
+    link: "/",
     submenu: [],
   },
   {
