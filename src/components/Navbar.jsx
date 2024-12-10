@@ -90,9 +90,7 @@ const Navbar = ({ pathname, lang }) => {
   return (
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
-        className={`relative flex h-20 items-center justify-between transition-all bg-black/50 ${
-          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto lg:bg-stripes bg-cover"
-        } duration-500`}
+        className={`fixed flex h-20 items-center justify-between transition-all bg-black/50 top-0 left-0 w-full lg:bg-stripes bg-cover duration-500`}
       >
         <div className="px-5 w-full">
           <a href={`${lang === "en" ? "/en" : "/"}`}
@@ -103,7 +101,7 @@ const Navbar = ({ pathname, lang }) => {
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle gap-5 justify-between transition-all`}
             id="navbar">
-            <div className={`flex w-full items-center justify-between ${navBar || openMobile ? "invisible" : ""}`}>
+            <div className={`flex w-full items-center justify-between`}>
               <div className="hidden lg:flex w-full items-top justify-center">
               <ul className="flex justify-between align-middle w-8/12 items-top"> 
                   {navbarLinks.map((item, index) => (
@@ -294,7 +292,7 @@ const Navbar = ({ pathname, lang }) => {
               {lang === "en" ? "🇲🇽 ES" : "🇺🇸 EN"}
             </a> */}
 
-            <div className={`absolute top-2 right-0 flex items-center ${navBar || openMobile ? "" : "lg:hidden"}`}>
+            <div className={`absolute top-2 right-0 flex items-center lg:hidden`}>
               <button
                 type="button"
                 className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
@@ -550,7 +548,7 @@ const Navbar = ({ pathname, lang }) => {
             </a>
           </div>
 
-          <ul className="flex gap-5 mt-5 text-gray-400">
+          {/* <ul className="flex gap-5 mt-5 text-gray-400">
             <li>
               <a
                 href={getRelativeLocaleUrl('es', pathname)}
@@ -567,7 +565,7 @@ const Navbar = ({ pathname, lang }) => {
                 🇺🇸 English
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </nav>
