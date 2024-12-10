@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bebas: ["Bebas Neue", ...defaultTheme.fontFamily.sans],
+        sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
         serif: ["Rokkitt", ...defaultTheme.fontFamily.serif],
         stock: [
           "ui-sans-serif",
