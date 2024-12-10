@@ -33,9 +33,9 @@ const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
 
 <section class="text-white relative z-20">
   <div
-    class="max-w-7xl mx-auto px-5 flex flex-col gap-20 items-center relative -top-[130px]"
+    class="max-w-7xl mx-auto px-5 flex flex-col items-center relative -top-[130px]"
   >
-    <div class="flex flex-col gap-5 max-w-xl justify-center items-center content-center text-center">
+    <div class="flex flex-col gap-5 pb-20 max-w-xl justify-center items-center content-center text-center">
       <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight"
           set:html={data.h2text}
       >
@@ -50,7 +50,7 @@ const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
       </p>
     </div>
 
-    <div id="sliced-programs" class="flex-col gap-10">
+    <div id="sliced-programs" class="flex-col gap-10 mb-10">
       {
         programs.slice(0, 3)
           .map((program) => (
@@ -100,6 +100,7 @@ const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
 
         if (!isVisible) {
           sectionFull.classList.add("visible");
+          sectionFull.classList.add("mb-10");
           sectionSliced.classList.add("hidden");
 
           toggleBtn.textContent = "Mostrar Menos";
@@ -111,6 +112,8 @@ const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
           sectionSliced.classList.remove("hidden");
 
           toggleBtn.textContent = "Mostrar Todos";
+
+          sectionFull.scrollIntoView({ behavior: "smooth" });
         }
       });
     }
