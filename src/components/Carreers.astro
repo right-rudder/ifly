@@ -105,7 +105,7 @@ const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
           toggleBtn.textContent = "Mostrar Menos";
 
           // Scroll to the full programs section after it becomes visible
-          sectionFull.scrollIntoView({ behavior: "smooth", block: "start" });
+          sectionFull.scrollIntoView({ behavior: "smooth" });
         } else {
           sectionFull.classList.remove("visible");
           sectionSliced.classList.remove("hidden");

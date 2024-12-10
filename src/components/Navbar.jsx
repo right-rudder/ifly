@@ -91,7 +91,7 @@ const Navbar = ({ pathname, lang }) => {
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
         className={`relative flex h-20 items-center justify-between transition-all bg-black/50 ${
-          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto bg-stripes bg-cover"
+          navBar || openMobile ? "fixed top-0 right-0 w-full lg:w-auto" : "top-0 left-1/2 transform -translate-x-1/2 w-full lg:w-auto lg:bg-stripes bg-cover"
         } duration-500`}
       >
         <div className="px-5 w-full">
