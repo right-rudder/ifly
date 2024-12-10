@@ -10,7 +10,7 @@
     @apply block text-center font-bold py-2 px-10 bg-transparent w-fit border-blue text-white duration-300 hover:bg-white/30;
   }
   .bg-stripes {
-    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%) , url(images/bg-stripes.png);
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%) , url(../../public/images/bg-stripes.png);
     background-position: 50% 45%;
   }  
 }
