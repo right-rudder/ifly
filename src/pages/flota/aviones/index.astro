@@ -1,7 +1,7 @@
 ---
 import Header from "../../../components/Header.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import PlaneCard from "../../../components/PlaneCard.astro";
+import PlaneCard2 from "../../../components/PlaneCard2.astro";
 import aviones from "../../../data/aviones";
 
 const data = {
@@ -32,10 +32,8 @@ const data = {
         </p>
       </div>
 
-      <div
-        class="grid gap-8 mt-5 lg:grid-cols-2 xl:grid-cols-3 max-w-lg lg:max-w-none mx-auto"
-      >
-        {aviones.map((plane) => <PlaneCard planeData={plane.data} />)}
+      <div class="grid gap-8 mt-5 max-w-lg lg:max-w-none mx-auto">
+        {aviones.map((plane) => <PlaneCard2 planeData={plane.data} />)}
       </div>
     </div>
   </section>
