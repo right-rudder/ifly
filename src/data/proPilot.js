@@ -2,8 +2,9 @@ const proPilot = {
   data: {
     title: "Pro Pilot",
     subTitle: "Técnico Superior",
+    subTitleFull: "Piloto comercial de Ala Fija (TSU)",
     description:
-      "Conviértete en Piloto Profesional con la carrera Pro Pilot de iFly. Obtén tu licencia de Piloto Comercial de Ala Fija y titulación de Técnico Superior Universitario en Aviación.",
+      "El alumno recibirá las herramientas y conocimientos necesarios para fungir como piloto comercial de ala fija y operar una aeronave bajo las reglas de vuelo visual o por instrumentos de forma segura. El curso permitirá al alumno desempeñar sus funciones como piloto de aeronaves comerciales de ala fija transportando pasajeros, carga y correo en ámbito nacional e internacional siguiendo las regulaciones aplicables a su cargo.",
     url: "/carreras/pro-pilot",
     slug: "pro-pilot",
     siteTitle: "Pro Pilot - Técnico Superior Universitario en Aviación",
@@ -16,6 +17,7 @@ const proPilot = {
     headerAlt: "Piloto en cabina de avión de iFly",
     primaryImage: "/src/assets/pilotos-de-avion-en-cabina.jpg",
     primaryAlt: "Piotos de avión en cabina preparándose para despegar",
+    perfil: "Pilotos aviadores comerciales de ala fija profesionales que se guían por estándares altos y conocimientos precisos y actuales para operar una aeronave de manera eficiente y segura con fines privados o comerciales de acuerdo con los reglamentos oficiales vigentes.",
     prerequisites: [
       "Ser mexicano/a",
       "Mayor de 18 años",
