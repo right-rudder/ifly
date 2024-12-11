@@ -2,8 +2,9 @@ const aviationManagement = {
   data: {
     title: "Aviation Management",
     subTitle: "Licenciatura",
+    subTitleFull: "Piloto comercial de ala fija y licenciatura en gestión aeronáutica.",
     description:
-      "La licenciatura en Aviation Management de iFly te prepara para ser un experto en la gestión aeronáutica. Obtén un título de Licenciado en Administración Aeronáutica y amplia tu carrera en la aviación civil.",
+      "El alumno desarrollará sus conocimentos y habilidades como piloto comercial de ala fija y como licensiado en gestión aeronáutica. El curso permitirá al alumno tener un campo laboral más amplio logrando ser proactivo dentro de la cabina volando aeronaves comerciales y en áreas administrativas diversas que involucran a la aviación como su base.",
     url: "/carreras/aviation-management",
     slug: "aviation-management",
     siteTitle:
