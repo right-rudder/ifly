@@ -1,9 +1,10 @@
 const sobrecargoDeAviacion = {
   data: {
-    title: "Sobrecargo de Aviación",
-    subTitle: "Cabin Crew",
+    title: "Cabin Crew",
+    subTitle: "Sobrecargo de Aviación",
+    subTitleFull: "Sobrecargo de Aviación",
     description:
-      "Fórmate como Sobrecargo de Aviación en iFly. Aprende todos los procedimientos y normas de seguridad para ser un sobrecargo certificado, con reconocimiento nacional e internacional.",
+      "El alumno obtendrá los conocimientos y fundamentos para fungir como sobrecargo de aviación. El curso permitirá al alumno desempeñar sus funciones como tripulante de cabina logrando mantener los estándares de seguridad y confort de los pasajeros en ámbito nacional e internacional bajo los lineamientos y regulaciones aplicables de forma eficiente y proactiva.",
     url: "/carreras/sobrecargo-de-aviacion",
     slug: "sobrecargo-de-aviacion",
     siteTitle: "Curso de Sobrecargo de Aviación - iFly Universidad Aeronáutica",
@@ -13,11 +14,12 @@ const sobrecargoDeAviacion = {
     intro: [
       "En esta carrera obtendrás los conocimientos y fundamentos para desempeñar como sobrecargo de aviación. La carrera te enseñará a desempeñar funciones como tripulante de cabina logrando mantener los estándares de seguridad y confort de los pasajeros en ámbito nacional e internacional bajo los lineamientos y regulaciones aplicables de forma eficiente y proactiva.",
     ],
-    headerImage: "../images/sobrecargos-de-aviacion.webp",
+    headerImage: "sobrecargo-de-aviacion-banner",
     headerAlt: "Piloto con sobrecargos de aviación",
     primaryImage:
       "/src/assets/sobrecargo-de-aviacion-frente-a-un-pipistrel.jpg",
     primaryAlt: "Sobrecargo de aviación frente a un Pipistrel",
+    perfil: "Sobrecargos de aviación profesionales que se guían bajo la normatividad y procedimientos para mantener de manera eficiente la seguridad de los pasajeros y tripulación en todas las fases del vuelo incluyendo conocimientos para actuar en caso de emergencia y procedimientos anormales ya sea en ámbito de aviación ejecutiva o comercial de acuerdo con los reglamentos oficiales vigentes.",
     prerequisites: [
       "Ser mexicano/a",
       "Mayor de 18 años",
