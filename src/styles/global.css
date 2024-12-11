@@ -22,6 +22,9 @@
   .aviation-management-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(../assets/ifly-aviation-management-banner.webp);
   }  
+  .pro-pilot-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(../assets/pro-pilot-banner.webp);
+  }  
 }
 
 body {
