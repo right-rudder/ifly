@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import BgTextureDown from "../assets/bg-texture-down.jpg";
+// import BgTextureDown from "../assets/bg-texture-down.jpg";
 import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
 
 const esData = {
@@ -25,12 +25,12 @@ const data = Astro.currentLocale === "en" ? enData : esData;
 
 ---
 
-<section id="bienvenido" class="scroll-my-24 custom-bg-gradient-b relative overflow-hidden">
-  <Image
+<section id="bienvenido" class="scroll-my-24 relative overflow-hidden bg-stripes bg-top bg-cover">
+  <!-- <Image
     src={BgTextureDown}
     alt="Texture used for background"
     class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
-  />
+  /> -->
 
   <div
     class="max-w-[70vw] lg:max-w-[50vw] mx-auto px-5 py-24 flex flex-col-reverse lg:flex-row gap-20 items-center"
