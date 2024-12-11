@@ -18,34 +18,36 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const esData = {
   title: "Sobre la carrera",
-  sidebarTitle: "¿Qué necesitas para comenzar?",
+  sidebarTitle: "Perfil de egreso",
+  sidebarTitle2: "¿Qué necesitas para comenzar?",
   sidebarNote: "*Documentos en original y cuatro copias simples.",
-  primaryButton: "Regístrate",
-  secondaryButton: "Más información",
-  sidebarTitle2: "Agenda una visita",
+  primaryButton: "REGÍSTRATE",
+  sidebarTitle3: "Agenda una visita",
   sidebarText:
     "¿Quieres conocer más sobre la carrera? Agenda una visita a nuestro campus y conoce a uno de nuestros instructores certificados.",
+  secondaryButton: "MÁS INFORMACIÓN",
 };
 
-const enData = {
-  title: "About the program",
-  sidebarTitle: "What do you need to start?",
-  sidebarNote: "*Documents in original and four simple copies.",
-  primaryButton: "Sign up",
-  secondaryButton: "More information",
-  sidebarTitle2: "Schedule a visit",
-  sidebarText:
-    "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
-};
+// const enData = {
+//   title: "About the program",
+//   sidebarTitle: "What do you need to start?",
+//   sidebarNote: "*Documents in original and four simple copies.",
+//   primaryButton: "Sign up",
+//   secondaryButton: "More information",
+//   sidebarTitle2: "Schedule a visit",
+//   sidebarText:
+//     "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
+// };
 
-const imageURL = "./../images/flota.webp";
-const lang = Astro.currentLocale === "en" ? "en" : "es";
-const info = Astro.currentLocale === "en" ? enData : esData;
+const imageURL = "./../images/carreers-form-banner.webp";
+// const lang = Astro.currentLocale === "en" ? "en" : "es";
+// const info = Astro.currentLocale === "en" ? enData : esData;
+const info = esData;
 ---
 <>
   <section class="flex flex-col">
     <div class="lg:mx-32 my-12">
-      <div class="mx-auto max-w-[80vw] grid grid-cols-1 lg:grid-cols-3 course-grid-colors">
+      <div class="mx-auto max-w-[80vw] grid grid-cols-1 lg:grid-cols-3 course-grid-colors relative z-10">
         {
           data.faqs.map((q) => (
             <nav>
@@ -64,38 +66,58 @@ const info = Astro.currentLocale === "en" ? enData : esData;
           ))
         }
       </div>
-      <div class="flex flex-col mx-auto w-full bg-[rgba(16,79,132,255)] relative -top-24 -z-10 overflow-hidden">
+      <div class="flex flex-col mx-auto w-full bg-[rgba(16,79,132,255)] relative -top-24 overflow-hidden">
         <Image
           src={LogoWhiteNoText}
           alt="iFly logo in white"
-          class="w-72 absolute -left-11 top-36 -z-50 filter-opacity-20"
+          class="w-72 absolute -left-11 top-36 z-10 filter-opacity-20"
         />
 
-        <div class="flex flex-col w-11/12 lg:w-6/12 mx-auto my-32 gap-4">
-          <h3
-            class="text-center text-2xl lg:text-4xl font-semibold"
-            set:html={info.sidebarTitle}
-          >
-          </h3>
-          <ul>
-            {
-              data.prerequisites.map((step) => (
-                <li class="flex items-center gap-2 w-8/12 mx-auto text-lg">
-                  <FaDotCircle className="text-main-blue size-3 shrink-0" />
-                  <div set:html={step} />
-                </li>
-              ))
-            }
-          </ul>
+        <div class="flex flex-col w-11/12  mx-auto mt-32 mb-7 gap-4">
+          <div class="flex flex-row gap-5">
+            <div class="flex-col w-1/2 gap-5">
+              <h3
+                class="text-center text-2xl lg:text-4xl font-semibold"
+                set:html={info.sidebarTitle}
+              />
+              <p class="text-xl pt-5"
+                set:html={data.perfil}
+              >
+              </p>    
+            </div>
+            <div class="flex-col w-1/2">
+              <h3
+                class="text-center text-2xl lg:text-4xl font-semibold"
+                set:html={info.sidebarTitle2}
+              >
+              </h3>
+              <ul>
+                {
+                  data.prerequisites.map((step) => (
+                    <li class="flex relative gap-2 w-8/12 mx-auto text-lg">
+                      <FaDotCircle className="text-main-blue size-3 shrink-0 relative top-2" />
+                      <div set:html={step} />
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+          <a href="#sign-up-form" class="btn-primary-white self-center w-2/5">
+            {info.primaryButton}
+          </a>
           <br/>
           <h3
             class="text-center text-2xl lg:text-4xl font-semibold"
-            set:html={info.sidebarTitle2}
+            set:html={info.sidebarTitle3}
           >
           </h3>
-          <p class="text-xl px-8">
+          <p class="text-xl px-8 w-8/12 self-center">
             {info.sidebarText}
           </p>
+          <a href="/contacto" class="btn-primary-white self-center w-2/5">
+            {info.secondaryButton}
+          </a>
       </div>
       </div>
     </div>
