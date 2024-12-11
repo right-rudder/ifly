@@ -90,13 +90,14 @@ const Navbar = ({ pathname, lang }) => {
   return (
     <nav className="w-full h-0 sticky top-0 z-50 tracking-wider">
       <div
-        className={`fixed flex h-20 items-center justify-between transition-all bg-black/50 top-0 left-0 w-full lg:bg-stripes bg-cover duration-500`}
+        className={`fixed flex h-20 items-center justify-between transition-all bg-black/50 
+          top-0 left-0 w-full ${ navBar || openMobile ? " lg:bg-stripes" : " bg-transparent "} bg-cover duration-500`}
       >
         <div className="px-5 w-full">
           <a href={`${lang === "en" ? "/en" : "/"}`}
             alt="iFly logo blue"
             className="absolute left-5 top-5 z-50">
-            <img src={whiteLogo.src} className="h-10"></img>
+            <img src={whiteLogo.src} className={`${ navBar || openMobile ? " h-10 " : " h-12 "} transition-all duration-700`}></img>
           </a>
           <div
             className={`${navBar || openMobile ? "lg:h-20" : "lg:h-28"} relative flex h-20 align-middle gap-5 justify-between transition-all`}
