@@ -2,8 +2,9 @@ const cadetPilot = {
   data: {
     title: "Cadet Pilot",
     subTitle: "Piloto Privado",
+    subTitleFull: "Piloto Privado",
     description:
-      "La carrera de Cadet Pilot de iFly te prepara para ser piloto privado con formación profesional. Obtén las habilidades necesarias para volar y disfrutar de la aviación civil a nivel personal.",
+      "El alumno obtendrá las bases y principios fundamentales para fungir como piloto privado de ala fija y llevar un vuelo visual de origen a destino de forma segura. El curso permitirá al alumno desempeñar sus funciones como piloto de aeronaves privadas monomotores de ala fija bajo los estándares de seguridad y legalidad aplicables.",
     url: "/carreras/cadet-pilot",
     slug: "cadet-pilot",
     siteTitle: "Cadet Pilot - Carrera de Formación de Pilotos Privados",
@@ -13,10 +14,11 @@ const cadetPilot = {
     intro: [
       "Esta carrera te formará como piloto aviador privado de ala fija profesional con bases firmes de conocimientos teóricos y prácticos para operar una aeronave de manera eficiente y segura con fines privados, de transporte o recreativos siguiendo los reglamentos y manuales oficiales.",
     ],
-    headerImage: "../images/piloto-en-cabina-de-avion-ifly-3.webp",
+    headerImage: "cadet-pilot-banner",
     headerAlt: "Piloto en cabina de avión de iFly",
     primaryImage: "/src/assets/piloto-en-cabina-de-avion-ifly-3.webp",
     primaryAlt: "Piloto en cabina de avión de iFly",
+    perfil: "Pilotos aviadores privados de ala fija profesionales con bases firmes de conocimientos teóricos y prácticos para operar una aeronave de manera eficiente y segura con fines privados, de transporte o recreativos siguiendo los reglamentos y manuales oficiales.",
     prerequisites: [
       "Ser mexicano/a",
       "Mayor de 18 años",
