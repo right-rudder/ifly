@@ -22,9 +22,9 @@ const data = Astro.currentLocale === "en" ? enData : esData;
   <Image
     src={Plane}
     alt="plane with iFly logo"
-    class="z-30 block absolute top-[5vh] left-[10vw] w-[70vw]"
+    class="z-10 block absolute top-[5vh] left-[10vw] w-[70vw]"
   />
-  <h1 class="text-2xl w-full text-center font-semibold lg:text-5xl relative top-[60%] left[50%] z-50"
+  <h1 class="text-2xl w-full text-center font-semibold lg:text-5xl relative top-[60%] left[50%] z-20"
       set:html={data.text}
   >
   </h1>
