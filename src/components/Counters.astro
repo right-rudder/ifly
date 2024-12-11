@@ -22,7 +22,7 @@ const stats = Astro.currentLocale === "en" ? enStats : esStats;
 
 ---
 
-<section class="bg-main-black/5 relative pb-[30vh] custom-bg-gradient-t">
+<section class="bg-main-black/5 relative pb-[30vh] bg-stripes bg-bottom bg-cover">
   <div class="overflow-hidden h-[60vh] relative">
     <Image
         src={Airplane}
@@ -30,11 +30,11 @@ const stats = Astro.currentLocale === "en" ? enStats : esStats;
         class="absolute inset-0 object-cover object-center h-full w-full border-blue-y"
     />
   </div>
-  <Image
+  <!-- <Image
     src={BgTextureUp}
     alt={data.imgAlt2}
     class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
-  />
+  /> -->
 
   
   <div class="relative -top-[60px] mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 grid-colors">
