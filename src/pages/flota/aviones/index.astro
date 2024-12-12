@@ -8,7 +8,7 @@ const data = {
   siteTitle: "Nuestra Flota de Aviones - iFly Universidad Aeronáutica",
   siteDescription:
     "Descubre la flota de aviones de iFly para formación de pilotos. Volarás en aeronaves modernas y seguras, diseñadas para ofrecer la mejor experiencia educativa y operativa.",
-  headerImage: "images/flota.webp",
+  headerImage: "flota-banner",
   headerAlt: "Flota de iFly",
   title: "Nuestra Flota de Aviones",
 };
@@ -17,7 +17,7 @@ const data = {
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
   <Header slot="header" data={data} />
 
-  <section>
+  <section class="bg-clouds-from-above bg-cover bg-no-repeat">
     <div class="max-w-7xl mx-auto px-5 py-24">
       <div class="max-w-4xl flex flex-col gap-5">
         <h2 class="uppercase text-white/80 tracking-widest">
