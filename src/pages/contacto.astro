@@ -40,7 +40,7 @@ const imgURL = "images/bg-clouds-from-above.webp";
 <BaseLayout siteTitle={data.siteTitle} siteDescription={data.siteDescription}>
   <ContactUsHeader slot="header" data={data} />
 
-  <div class="absolute h-[400vh] w-full bg-cover -z-50"
+  <div class="absolute h-[750vh] lg:h-[400vh] w-full bg-cover -z-50"
     style=`background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url(./${imgURL})`
   ></div>
 
@@ -49,7 +49,7 @@ const imgURL = "images/bg-clouds-from-above.webp";
     <Image
       src={Tecnam}
       alt="Estudiante en hangar de iFly"
-      class="w-4/6 z-10 relative mx-auto top-12"
+      class="w-11/12 lg:w-4/6 z-10 relative mx-auto top-8 lg:top-12"
     />
 
     <div
@@ -59,11 +59,11 @@ const imgURL = "images/bg-clouds-from-above.webp";
         <div
           class="lg:flex-1 flex flex-col gap-10"
         >
-          <h2 class="font-medium text-5xl mx-auto">
+          <h2 class="font-medium text-5xl mx-auto pt-8">
             Ponte en contacto
           </h2>
-          <ul class="flex flex-row gap-5 justify-between text-center">
-            <li class="w-1/3">
+          <ul class="flex flex-col lg:flex-row gap-5 justify-between text-center items-center">
+            <li class="w-11/12 lg:w-1/3">
               <a
                 href="https://maps.app.goo.gl/xnquhkZFTguttGxo8"
                 target="_blank"
@@ -86,7 +86,7 @@ const imgURL = "images/bg-clouds-from-above.webp";
                 </div>
               </a>
             </li>
-            <li class="w-1/3">
+            <li class="w-11/12 lg:w-1/3">
               <a href=`tel:${PHONE_NUMBER}` class="group flex flex-col gap-5 items-center">
                 <div
                   class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-main-blue/80 duration-300"
@@ -102,7 +102,7 @@ const imgURL = "images/bg-clouds-from-above.webp";
               </div>
               </a>
             </li>
-            <li class="w-1/3">
+            <li class="w-11/12 lg:w-1/3">
               <a href=`mailto:${EMAIL_ADDRESS}` class="group flex flex-col gap-5 items-center">
                 <div
                   class="p-3 bg-main-blue w-fit h-fit rounded-full group-hover:bg-main-blue/80 duration-300"
