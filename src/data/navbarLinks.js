@@ -31,6 +31,10 @@ export const navbarLinks = [
         name: "Técnico en Mantenimiento",
         link: "/carreras/tecnico-en-mantenimiento",
       },
+      {
+        name: "Cursos Complementarios",
+        link: "/carreras/cursos-complementarios",
+      },
     ],
   },
   {
