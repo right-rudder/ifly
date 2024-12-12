@@ -14,7 +14,7 @@ const { data } = Astro.props;
 
 <header
   class={`relative isolate pt-20 overflow-hidden min-h-[70vh] lg:h-[90vh] text-white flex
-    items-center bg-no-repeat bg-cover bg-center ${data.headerImage}`}
+    items-center bg-no-repeat bg-cover lg:bg-center ${data.headerImage}`}
 >
   <!-- <Image
   src={images[data.headerImage]()}
@@ -25,7 +25,7 @@ const { data } = Astro.props;
   <div class="absolute inset-0 bg-main-black/60 -z-40"></div> -->
 
   <div
-    class="flex w-[60vw] max-w-7xl lg:ml-28 px-5 font-medium flex-col"
+    class="flex lg:w-[60vw] max-w-7xl lg:ml-28 p-5 font-medium flex-col"
   >
     <h1
       class="text-4xl md:text-6xl lg:text-8xl tracking-wider max-w-xl font-extrabold lg:max-w-4xl"
@@ -38,7 +38,7 @@ const { data } = Astro.props;
     <h2 class="text-xl md:text-2xl lg:text-4xl font-semibold uppercase py-5">
       {data.subTitleFull}
     </h2>
-    <p class="text-md md:text-lg lg:text-xl w-[60%]">
+    <p class="text-md md:text-lg lg:text-xl lg:w-[60%]">
       {data.description}
     </p>
     

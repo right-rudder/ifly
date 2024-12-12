@@ -24,24 +24,31 @@
   }  
   .aviation-management-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/ifly-aviation-management-banner.webp);
+    background-position: 60%;
   }  
   .pro-pilot-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/pro-pilot-banner.webp);
+    background-position: 80%;
   }  
   .cadet-pilot-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/cadet-pilot-banner.webp);
+    background-position: 80%;
   }  
   .sobrecargo-de-aviacion-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/sobrecargo-de-aviacion-banner.webp);
+    background-position: 80%;
   }  
   .aircraft-dispatcher-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/aircraft-dispatcher-banner.webp);
+    background-position: 70%;
   }  
   .aircraft-maintenance-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/aircraft-maintenance-banner.webp);
+    background-position: 50%;
   }  
   .cursos-complementarios-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/cursos-complementarios-banner.webp);
+    background-position: 90%;
   }  
   .flota-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/flota-banner.webp);
