@@ -18,7 +18,7 @@ if (!images[imagePath])
   );
 ---
 
-<div class="flex-1 flex flex-col gap-2 justify-center items-center content-center text-center h-[70vh] lg:h-[60vh] ">
+<div class="flex-1 flex flex-col gap-2 justify-center items-center content-center text-center h-[90vh] lg:h-[60vh]">
   <!-- <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight mt-5"
     set:html={quoteText}
   >
@@ -29,7 +29,7 @@ if (!images[imagePath])
   >
   </h3> -->
   <div
-    class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center bg-sec-blue z-10 relative overflow-hidden hover:scale-105 transition-all duration-300"
+    class="max-w-[90vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center bg-sec-blue z-10 relative overflow-hidden hover:scale-105 transition-all duration-300"
   >
     <Image
       src={images[imagePath]()}
@@ -37,7 +37,7 @@ if (!images[imagePath])
       class="absolute -left-11 -top-3 -z-50 filter-opacity-20"
     />
 
-    <quote class="max-w-[90%] text-left flex flex-col text-lg font-extralight"
+    <quote class="max-w-[90%] text-left flex flex-col lg:text-lg font-extralight"
     >
       {quoteText}
       <br/>

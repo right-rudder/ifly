@@ -1,7 +1,7 @@
 const oficialDeOperaciones = {
   data: {
     title: "Aircraft Dispatcher",
-    subTitle: "OFICIAL DE OPERACIONES",
+    subTitle: "Oficial de Operaciones",
     subTitleFull: "OFICIAL DE OPERACIONES AERONAUTICAS",
     description:
       "El alumno desarrollará sus conocimientos y habilidades como oficial de operaciones aéreas. El curso permitirá al alumno desempeñar sus funciones como despachador de aeronaves logrando mantener los estándares de seguridad operacional de las aeronaves en relación con su peso y balance, combustible e itinerarios bajo los lineamientos y regulaciones aplicables con profesionalismo y excelencia.",

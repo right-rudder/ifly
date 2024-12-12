@@ -11,7 +11,7 @@ const cursosComplementares = {
       "cursos-complementarios-banner",
     headerAlt: "Técnico de mantenimiento arreglando un Cessna",
     primaryImage:
-      "/src/assets/tecnicos-de-mantenimiento-empujando-avion-hacia-el-hangar.jpg",
+      "/src/assets/sombrero-de-piloto.webp",
     primaryAlt: "Técnicos de mantenimiento empujando avión hacia el hangar",
     cursosH: "CURSOS COMPLEMENTARIOS",
     prerequisites: [
