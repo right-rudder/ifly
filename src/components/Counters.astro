@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import BgTextureUp from "../assets/bg-texture-up.jpg";
+import StudentsHangar from "../assets/estudiantes-frente-a-hangares-de-ifly.webp";
+import Airplane from "../assets/ifly-tecnam.png"
+import CounterCard from "../components/CounterCard";
+import esStats from "../data/stats";
+import enStats from "../data/en/stats";
+
+const esData = {
+  imgAlt1: "El avión tecnam de iFly sobrevolando las nubes",
+  imgAlt2: "Textura utilizada para el fondo"
+};
+
+const enData = {
+  imgAlt1: "iFly's tecnam plane flying over clouds",
+  imgAlt2: "Texture used for background"
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+const stats = Astro.currentLocale === "en" ? enStats : esStats;
+
+---
+
+<section class="bg-main-black/5 relative pb-[30vh] bg-stripes bg-bottom bg-cover">
+  <div class="overflow-hidden lg:h-[60vh] relative">
+    <Image
+        src={Airplane}
+        alt={data.imgAlt1}
+        class="relative lg:inset-0 object-cover object-center lg:h-full w-full border-blue-y"
+    />
+  </div>
+  <!-- <Image
+    src={BgTextureUp}
+    alt={data.imgAlt2}
+    class="absolute inset-0 -z-50 object-cover object-center w-full h-full"
+  /> -->
+
+  
+  <div class="relative lg:-top-[60px] mx-auto max-w-7xl grid grid-cols-2 lg:grid-cols-4 grid-colors">
+    {
+      stats.map((stat) => (
+        <CounterCard
+          client:only="react"
+          value={stat.value}
+          title={stat.title}
+        />
+      ))
+    }
+  </div>
+</section>

@@ -1,8 +1,10 @@
 const tecnicoEnMantenimiento = {
   data: {
-    title: "Técnico en Mantenimiento",
+    title: "Aircraft Maintenance Technician",
+    subTitle: "Técnico en Mantenimiento",
+    subTitleFull: "TÉCNICO EN MANTENIMIENTO DE AERONAVES",
     description:
-      "Fórmate como Técnico en Mantenimiento Aeronáutico en iFly. Aprende a mantener y reparar aeronaves siguiendo los más altos estándares de seguridad.",
+      "El alumno desarrollará técnicas y habilidades, así como adquisición de conocimientos para fungir como técnico en mantenimiento de aeronaves ligeras de motor recíproco. El curso permitirá al alumno desempeñar sus funciones como mecánico de aeronaves logrando mantener los estándares de seguridad y el óptimo funcionamiento de las aeronaves en relación con su tren motriz, estructura, sistemas y aviónica bajo los lineamientos y regulaciones aplicables.",
     url: "/carreras/tecnico-en-mantenimiento",
     slug: "tecnico-en-mantenimiento",
     siteTitle:
@@ -13,11 +15,12 @@ const tecnicoEnMantenimiento = {
       "En esta carrera desarrollarás técnicas y habilidades, así como adquisición de conocimientos para desempeñar como técnico en mantenimiento de aeronaves ligeras de motor recíproco. La carrera te permitirá desempeñar como mecánico de aeronaves logrando mantener los estándares de seguridad y el óptimo funcionamiento de las aeronaves en relación con su tren motriz, estructura, sistemas y aviónica bajo los lineamientos y regulaciones aplicables.",
     ],
     headerImage:
-      "/src/assets/tecnico-de-mantenimiento-arreglando-un-cessna.jpg",
+      "aircraft-maintenance-banner",
     headerAlt: "Técnico de mantenimiento arreglando un Cessna",
     primaryImage:
       "/src/assets/tecnicos-de-mantenimiento-empujando-avion-hacia-el-hangar.jpg",
     primaryAlt: "Técnicos de mantenimiento empujando avión hacia el hangar",
+    perfil: "Técnicos en mantenimiento de aeronaves profesionales que se guían bajo procedimientos actuales para mantener de manera eficiente la operación de las aeronaves en una coordinación correcta de los aspectos de tren motriz, estructura, sistemas y aviónica de la aeronave que a su vez mantenga vuelos seguros en todo momento.",
     prerequisites: [
       "Ser mexicano/a",
       "Mayor de 18 años",

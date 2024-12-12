@@ -6,6 +6,10 @@ import type { ImageMetadata } from "astro";
 import FAQs from "../components/FAQs";
 import { sequence } from "astro:middleware";
 import ProgramForm from "../components/ProgramForm.astro";
+import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
+import CTAImage from "../components/CTAImage.astro";
+import IndexForm from "../components/IndexForm.astro";
+
 
 const { data } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -14,87 +18,113 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const esData = {
   title: "Sobre la carrera",
-  sidebarTitle: "¿Qué necesitas para comenzar?",
+  sidebarTitle: "Perfil de egreso",
+  sidebarTitle2: "¿Qué necesitas para comenzar?",
   sidebarNote: "*Documentos en original y cuatro copias simples.",
-  primaryButton: "Regístrate",
-  secondaryButton: "Más información",
-  sidebarTitle2: "Agenda una visita",
+  primaryButton: "REGÍSTRATE",
+  sidebarTitle3: "Agenda una visita",
   sidebarText:
     "¿Quieres conocer más sobre la carrera? Agenda una visita a nuestro campus y conoce a uno de nuestros instructores certificados.",
+  secondaryButton: "MÁS INFORMACIÓN",
 };
 
-const enData = {
-  title: "About the program",
-  sidebarTitle: "What do you need to start?",
-  sidebarNote: "*Documents in original and four simple copies.",
-  primaryButton: "Sign up",
-  secondaryButton: "More information",
-  sidebarTitle2: "Schedule a visit",
-  sidebarText:
-    "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
-};
+// const enData = {
+//   title: "About the program",
+//   sidebarTitle: "What do you need to start?",
+//   sidebarNote: "*Documents in original and four simple copies.",
+//   primaryButton: "Sign up",
+//   secondaryButton: "More information",
+//   sidebarTitle2: "Schedule a visit",
+//   sidebarText:
+//     "Do you want to know more about the program? Schedule a visit to our campus and meet one of our certified instructors.",
+// };
 
-const lang = Astro.currentLocale === "en" ? "en" : "es";
-const info = Astro.currentLocale === "en" ? enData : esData;
+const imageURL = "carreers-form-banner";
+// const lang = Astro.currentLocale === "en" ? "en" : "es";
+// const info = Astro.currentLocale === "en" ? enData : esData;
+const info = esData;
 ---
-
-<section class="py-12 px-5 bg-main-black/10 lg:pb-60">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
-    <div class="flex-[2_2_0] flex flex-col gap-5">
-      <Image
-        src={images[data.primaryImage]()}
-        alt={data.primaryAlt}
-        class="rounded-xl aspect-video object-cover w-full"
-      />
-      <div class="flex flex-col gap-5 mt-10">
-        <h2 class="text-5xl">{info.title}</h2>
+<>
+  <section class="flex flex-col">
+    <div class="lg:mx-32 my-12">
+      <div class="mx-auto max-w-[80vw] grid grid-cols-1 lg:grid-cols-3 course-grid-colors relative z-10">
         {
-          data.intro.map((intro) => (
-            <p class="text-main-black/80 lg:text-lg" set:html={intro} />
+          data.faqs?.map((q) => (
+            <nav>
+              <div class="bg-dark-blue flex flex-col py-10 group w-full h-full">
+                <div class="border-r border-white/20 px-10 flex flex-col items-center group-last:border-0 w-full h-full">
+                  <span class="text-xl md:text-2xl text-main-blue font-semibold">
+                    {q.question}
+                  </span>
+                  <h2 class="text-lg my-auto"
+                    set:html={q.answer}
+                  >
+                  </h2>
+                </div>
+              </div>
+            </nav>
           ))
         }
       </div>
-      <FAQs faqs={data.faqs} lang={lang} client:visible />
+      <div class="flex flex-col mx-auto w-full bg-[rgba(16,79,132,255)] relative -top-24 overflow-hidden">
+        <Image
+          src={LogoWhiteNoText}
+          alt="iFly logo in white"
+          class="w-72 absolute -left-11 top-36 z-10 filter-opacity-20"
+        />
+
+        <div class="flex flex-col w-11/12  mx-auto mt-32 mb-7 gap-4">
+          <div class="flex flex-row gap-5 justify-around flex-wrap">
+{            
+          data.perfil?.length > 0 && (
+            <div class="flex-col w-10/12 lg:w-2/5 gap-5">
+              <h3
+                class="text-center text-2xl lg:text-4xl font-semibold"
+                set:html={info.sidebarTitle}
+              />
+              <p class="text-xl pt-5"
+                set:html={data.perfil}
+              >
+              </p>    
+            </div>
+)}
+            <div class="flex-col w-10/12 lg:w-1/2">
+              <h3
+                class="text-center text-2xl lg:text-4xl font-semibold"
+                set:html={data.cursosH ? data.cursosH : info.sidebarTitle2}
+              >
+              </h3>
+              <ul>
+                {
+                  data.prerequisites?.map((step) => (
+                    <li class="flex relative gap-2 w-full lg:w-8/12 mx-auto text-lg">
+                      <FaDotCircle className="text-main-blue size-3 shrink-0 relative top-2" />
+                      <div set:html={step} />
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+          <a href="#sign-up-form" class="btn-primary-white self-center w-full lg:w-2/5">
+            {info.primaryButton}
+          </a>
+          <br/>
+          <h3
+            class="text-center text-2xl lg:text-4xl font-semibold"
+            set:html={info.sidebarTitle3}
+          >
+          </h3>
+          <p class="text-xl px-8 lg:w-8/12 self-center">
+            {info.sidebarText}
+          </p>
+          <a href="/contacto" class="btn-primary-white self-center w-full lg:w-2/5">
+            {info.secondaryButton}
+          </a>
+      </div>
+      </div>
     </div>
-    <aside class="flex-1 flex flex-col gap-10 max-w-xl mx-auto">
-      <div class="bg-white rounded-xl p-10 flex flex-col gap-5 shadow-sm">
-        <h4 class="text-3xl">{info.sidebarTitle}</h4>
-        <hr />
-        <ul class="flex flex-col gap-2 my-3">
-          {
-            data.prerequisites.map((step) => (
-              <li class="flex items-center gap-2 text-main-black/80">
-                <FaDotCircle className="text-main-blue size-3 shrink-0" />
-                <div set:html={step} />
-              </li>
-            ))
-          }
-        </ul>
-        <p class="font-medium">
-          {info.sidebarNote}
-        </p>
-        <a href="#sign-up-form" class="btn-primary w-full"
-          >{info.primaryButton}</a
-        >
-      </div>
-
-      <div class="bg-white rounded-xl p-10 flex flex-col gap-5 shadow-sm">
-        <div class="bg-main-blue w-fit rounded-full p-3">
-          <IoMdAirplane className="size-10 text-main-black" />
-        </div>
-        <h4 class="text-3xl">{info.sidebarTitle2}</h4>
-        <hr />
-        <p class="text-main-black/80 lg:text-lg">
-          {info.sidebarText}
-        </p>
-        <a
-          href="/contacto"
-          class="btn-secondary w-full border-main-black text-main-black hover:bg-main-black/10"
-          >{info.secondaryButton}</a
-        >
-      </div>
-    </aside>
-  </div>
-</section>
-
-<ProgramForm programTitle={data.title} />
+  <section/>
+  <CTAImage imgURL={imageURL}/>
+  <IndexForm />
+</>

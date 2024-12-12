@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import Clouds from "../assets/clouds-from-above.png";
+import Plane from "../assets/ifly-plane-no-bg.png";
+const esData = {
+  text: "Convierte tu amor por volar<br/>en una carrera profesional"
+};
+
+const enData = {
+  text: "Turn your love for flying<br/>into a professional career."
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+---
+
+<section class="w-full h-[40vh] md:h-[60vh] lg:h-[80vh] relative custom-bg-gradient z-00 overflow-hidden">
+  <Image
+    src={Clouds}
+    alt="skies from above"
+    class="-z-50 block absolute object-cover object-center w-full h-full top-0"
+  />
+  <Image
+    src={Plane}
+    alt="plane with iFly logo"
+    class="z-10 block absolute top-[5vh] left-[10vw] w-[70vw]"
+  />
+  <h1 class="text-2xl w-full text-center font-semibold lg:text-5xl relative top-[60%] left[50%] z-20"
+      set:html={data.text}
+  >
+  </h1>
+
+</section>

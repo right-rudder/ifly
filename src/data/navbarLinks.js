@@ -1,7 +1,7 @@
 export const navbarLinks = [
   {
-    name: "¿Por qué ser piloto?",
-    link: "/por-que-ser-piloto",
+    name: "Inicio",
+    link: "/",
     submenu: [],
   },
   {
@@ -31,6 +31,10 @@ export const navbarLinks = [
         name: "Técnico en Mantenimiento",
         link: "/carreras/tecnico-en-mantenimiento",
       },
+      {
+        name: "Cursos Complementarios",
+        link: "/carreras/cursos-complementarios",
+      },
     ],
   },
   {
@@ -47,24 +51,29 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "¿Quiénes somos?",
+    name: "Quiénes somos",
+    link: "/nosotros/historia",
     submenu: [
-      {
-        name: "Historia",
-        link: "/nosotros/historia",
-      },
-      {
-        name: "Equipo",
-        link: "/nosotros/equipo",
-      },
-      {
-        name: "Campus",
-        link: "/nosotros/campus",
-      },
-      {
-        name: "Blog",
-        link: "/blog",
-      },
+      // {
+      //   name: "Filosofia",
+      //   link: "/nosotros/historia",
+      // },
+      // {
+      //   name: "Historia",
+      //   link: "/nosotros/historia",
+      // },
+      // {
+      //   name: "Equipo",
+      //   link: "/nosotros/equipo",
+      // },
+      // {
+      //   name: "Campus",
+      //   link: "/nosotros/campus",
+      // },
+      // {
+      //   name: "Blog",
+      //   link: "/blog",
+      // },
     ],
   },
   {

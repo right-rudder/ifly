@@ -1,0 +1,29 @@
+---
+const esData = {
+  title: "Toma el control de tu futuro...",
+  firstParagraph:
+    "Empieza a estudiar hoy en iFly Universidad Aeronáutica<br> y toma el primer paso en tu carrera.",
+};
+
+const enData = {
+  title: "Take the first step...",
+  firstParagraph:
+    "Start studying today at iFly Aeronautical University and take the first step in your career.",
+};
+
+const { imgURL } = Astro.props;
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+---
+
+<section  class={`relative top-0 bg-local bg-top bg-cover h-[80vh] flex flex-col justify-end items-center content-center gap-10 pb-20 px-4 ${imgURL}`} 
+>
+  <h2 class="font-serif text-3xl lg:text-6xl text-white/90 tracking-normal"
+      set:html={data.title}
+  >
+  </h2>
+  <p class="text-2xl lg:text-3xl max-w-[90vw] text-white/80"
+      set:html={data.firstParagraph}
+  >
+  </p>
+</section>

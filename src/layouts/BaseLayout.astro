@@ -2,7 +2,10 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import "@fontsource/fira-sans";
+// Supports weights 100-900
+import '@fontsource-variable/rokkitt';
+// Supports weights 100-900
+import '@fontsource-variable/inter';
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription } = Astro.props;

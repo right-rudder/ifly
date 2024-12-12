@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import LogoWhiteNoText from "../assets/ifly-logo-white-no-text.png";
+
+const esData = {
+  h2text: "Testimonios",
+  h3text: "Conoce la experiencia de nuestros estudiantes",
+  quoteText: `"iFly es la familia que me vió nacer como piloto aviador profesional y
+        me ayudó a cumplir uno de mis más grandes sueños, es para mí un placer
+        y un orgullo haberme formado en esta gran familia."`,
+  citeText: `- Roberto Novelo Cicero (Piloto aviador)`
+};
+
+const enData = {
+  h2text: "Testimonials",
+  h3text: "Discover the experiences of our students",
+  quoteText: `"iFly is the family that saw me grow as a professional aviator pilot and
+          helped me fulfill one of my greatest dreams. It is a pleasure
+          and an honor for me to have been trained in this great family."`,
+  citeText: `- Roberto Novelo Cicero (Aviator Pilot)`
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+
+---
+
+<section class="flex flex-col items-center bg-black">
+    <div
+      class="max-w-[80vw] lg:max-w-[60vw] flex-1 flex flex-col gap-5 justify-center items-center content-center text-center mx-5 sm:mx-10 lg:mx-0 bg-sec-blue p-5 lg:p-14 z-10 relative overflow-hidden my-24"
+    >
+      <Image
+        src={LogoWhiteNoText}
+        alt="iFly logo in white"
+        class="w-44 absolute -left-11 -top-3 -z-50 filter-opacity-20"
+      />
+
+      <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight"
+          set:html={data.h2text}
+      >
+        
+      </h2>
+      <h3 class="lg:text-xl text-main-blue border-fade-light pb-2"
+          set:html={data.h3text}
+      >
+      </h3>
+      <quote class="max-w-[60%] text-left flex flex-col"
+      >
+        {data.quoteText}
+        <br/>
+        <cite class="text-right font-semibold"
+        set:html={data.citeText}
+        >
+        </cite>
+      </quote>
+
+    </div>
+</section>
+

@@ -21,7 +21,7 @@ const FAQs = ({ faqs, lang }) => {
           <div key={index} className="border-b border-main-black/30 pb-2">
             <button
               onClick={() => toggleFAQ(index)}
-              className="text-xl w-full text-left flex justify-between py-3 text-main-black/90 hover:text-main-blue"
+              className="text-xl w-full text-left flex justify-between py-3 hover:text-main-blue"
             >
               {faq.question}
               <IoIosArrowForward
@@ -35,7 +35,7 @@ const FAQs = ({ faqs, lang }) => {
                 openQuestions[index] ? "max-h-48" : "max-h-0"
               }`}
             >
-              <div className="text-main-black/60 text-xl pl-5">
+              <div className="text-xl pl-5">
                 {parse(faq.answer)}
               </div>
             </div>

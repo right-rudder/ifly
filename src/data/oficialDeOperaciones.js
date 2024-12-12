@@ -1,8 +1,10 @@
 const oficialDeOperaciones = {
   data: {
-    title: "Oficial de Operaciones (Dispatcher)",
+    title: "Aircraft Dispatcher",
+    subTitle: "Oficial de Operaciones",
+    subTitleFull: "OFICIAL DE OPERACIONES AERONAUTICAS",
     description:
-      "Conviértete en Oficial de Operaciones con la formación especializada de iFly. Gestiona la seguridad de vuelo y conoce las normativas internacionales para un desarrollo profesional en la aviación civil.",
+      "El alumno desarrollará sus conocimientos y habilidades como oficial de operaciones aéreas. El curso permitirá al alumno desempeñar sus funciones como despachador de aeronaves logrando mantener los estándares de seguridad operacional de las aeronaves en relación con su peso y balance, combustible e itinerarios bajo los lineamientos y regulaciones aplicables con profesionalismo y excelencia.",
     url: "/carreras/oficial-de-operaciones",
     slug: "oficial-de-operaciones",
     siteTitle:
@@ -12,10 +14,11 @@ const oficialDeOperaciones = {
     intro: [
       "En esta carrera desarrollarás tus conocimientos y habilidades como oficial de operaciones aéreas. El curso te permitirá desempeñar funciones como despachador de aeronaves logrando mantener los estándares de seguridad operacional de las aeronaves en relación con su peso y balance, combustible e itinerarios bajo los lineamientos y regulaciones aplicables con profesionalismo y excelencia.",
     ],
-    headerImage: "/src/assets/oficial-de-operaciones-en-hangares-de-ifly.webp",
+    headerImage: "aircraft-dispatcher-banner",
     headerAlt: "Oficial de operaciones en hangares de iFly",
     primaryImage: "/src/assets/oficial-de-operaciones-operando.webp",
     primaryAlt: "Oficial de operaciones operando",
+    perfil: "Despachadores profesionales que se guían bajo la normatividad y conocimientos actuales para mantener de manera eficiente la seguridad de los pasajeros, tripulación y carga basado en una coordinación correcta de los aspectos de peso y balance, ruta y características de la aeronave ya sea en ámbito de aviación ejecutiva o comercial de acuerdo con los reglamentos oficiales vigentes.",
     prerequisites: [
       "Ser mexicano/a",
       "Mayor de 18 años",

@@ -1,0 +1,121 @@
+---
+import enPrograms from "../data/en/programs";
+import esPrograms from "../data/programs";
+import ProgramCard from "../components/ProgramCard.astro";
+
+const esData = {
+  h2text: "Nuestras Carreras",
+  h3text: "Conoce nuestros programas de estudio",
+  ptext: `
+        En iFly te oferecemos programas de estudio para que te conviertas en
+        un profesional de la aviación civil. Conoce nuestros programas y
+        elige el que más se adapte a tus necesidades.
+        `,
+  linkRef: "/por-que-ser-piloto#programas",
+  linkText: "Ver Todos"
+};
+
+const enData = {
+  h2text: "Our Programs",
+  h3text: "Learn about our study programs",
+  ptext: `
+        At iFly, we offer study programs to help you become a professional in
+        civil aviation. Explore our programs and choose the one that best fits
+        your needs.
+        `,
+  linkRef: "/why-become-a-pilot#programs",
+  linkText: "See All"
+};
+
+const data = Astro.currentLocale === "en" ? enData : esData;
+const programs = Astro.currentLocale === "en" ? enPrograms : esPrograms;
+---
+
+<section class="text-white relative z-20">
+  <div
+    class="max-w-8xl mx-auto px-5 flex flex-col items-center relative -top-[130px]"
+  >
+    <div class="flex flex-col gap-5 pb-20 max-w-xl justify-center items-center content-center text-center">
+      <h2 class="uppercase font-bold text-main-blue text-xl lg:text-3xl tracking-tight"
+          set:html={data.h2text}
+      >
+      </h2>
+      <h3 class="lg:text-xl text-main-blue"
+          set:html={data.h3text}
+      >
+      </h3>
+      <p class="lg:text-2xl text-left w-[70vw] lg:w-[50vw]"
+          set:html={data.ptext}
+      >
+      </p>
+    </div>
+
+    <div id="sliced-programs" class="flex-col gap-10 mb-10">
+      {
+        programs.slice(0, 3)
+          .map((program) => (
+            <ProgramCard
+              title={program.data.title}
+              subTitle={program.data.subTitle}
+              description={program.data.description}
+              imagePath={program.data.primaryImage}
+              url={program.data.url}
+            />
+          ))
+      }
+    </div>
+    <div id="full-programs" class="flex-col gap-10">
+      {
+        programs
+          .map((program) => (
+            <ProgramCard
+              title={program.data.title}
+              subTitle={program.data.subTitle}
+              description={program.data.description}
+              imagePath={program.data.primaryImage}
+              url={program.data.url}
+            />
+          ))
+      }
+    </div>
+    <!-- <a
+      href={data.linkRef}
+      class="btn-primary w-full max-w-lg"
+      set:html={data.linkText}
+    ></a> -->
+    <button id="slice-button" class="btn-primary w-full max-w-lg">
+      Mostrar Todos
+    </button>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sectionSliced = document.getElementById("sliced-programs");
+    const sectionFull = document.getElementById("full-programs");
+    const toggleBtn = document.getElementById("slice-button");
+
+    if (toggleBtn && sectionSliced && sectionFull) {
+      toggleBtn.addEventListener("click", () => {
+        const isVisible = sectionFull.classList.contains("visible");
+
+        if (!isVisible) {
+          sectionFull.classList.add("visible");
+          sectionFull.classList.add("mb-10");
+          sectionSliced.classList.add("hidden");
+
+          toggleBtn.textContent = "Mostrar Menos";
+
+          // Scroll to the full programs section after it becomes visible
+          sectionFull.scrollIntoView({ behavior: "smooth" });
+        } else {
+          sectionFull.classList.remove("visible");
+          sectionSliced.classList.remove("hidden");
+
+          toggleBtn.textContent = "Mostrar Todos";
+
+          sectionFull.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
+  });
+</script>

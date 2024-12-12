@@ -4,13 +4,212 @@
 
 @layer components {
   .btn-primary {
-    @apply block text-center font-bold py-4 px-10 bg-main-blue w-fit text-white rounded-full duration-300 hover:bg-main-blue/80;
+    @apply block text-center font-bold py-2 px-10 bg-main-blue w-fit border-blue text-white duration-300 hover:bg-main-blue/80;
+  }
+  .btn-primary-white {
+    @apply block text-center font-bold py-2 px-10 bg-white w-fit border-blue text-[rgba(16,79,132,255)] duration-300 hover:bg-main-blue/80 hover:text-white;
   }
   .btn-secondary {
-    @apply block text-center font-bold py-4 px-10 bg-transparent w-fit border-white border text-white rounded-full duration-300 hover:bg-white/30;
+    @apply block text-center font-bold py-2 px-10 bg-transparent w-fit border-blue text-white duration-300 hover:bg-white/30;
   }
+  .bg-stripes {
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%) , url(../../public/images/bg-stripes.png);
+    background-position: 50% 45%;
+  }  
+  .bg-stripes-blue {
+    background-image:linear-gradient(to right, rgba(0, 76, 190, 0.3) 0%, rgba(0, 76, 190, 0.3) 100%) , url(../../public/images/bg-stripes.png);
+  }  
+  .bg-clouds-from-above {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(../assets/bg-clouds-from-above.webp);
+  }  
+  .aviation-management-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/ifly-aviation-management-banner.webp);
+    background-position: 60%;
+  }  
+  .pro-pilot-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/pro-pilot-banner.webp);
+    background-position: 80%;
+  }  
+  .cadet-pilot-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/cadet-pilot-banner.webp);
+    background-position: 80%;
+  }  
+  .sobrecargo-de-aviacion-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/sobrecargo-de-aviacion-banner.webp);
+    background-position: 80%;
+  }  
+  .aircraft-dispatcher-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/aircraft-dispatcher-banner.webp);
+    background-position: 70%;
+  }  
+  .aircraft-maintenance-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/aircraft-maintenance-banner.webp);
+    background-position: 50%;
+  }  
+  .cursos-complementarios-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/cursos-complementarios-banner.webp);
+    background-position: 90%;
+  }  
+  .flota-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/flota-banner.webp);
+    background-position: 15%;
+  }  
+  .simuladores-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/simuladores-banner.webp);
+    background-position: 40%;
+  }  
+  .filosofia-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/filosofia-banner.webp);
+    background-position: 30%;
+  }  
+  .blog-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/blog-banner.webp);
+  }  
+  .carreers-form-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/carreers-form-banner.webp);
+  }  
+  .ifly-index-form-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/ifly-index-form-banner.webp);
+  }  
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
+  background-color: black;
+  color: white;
 }
+
+h1 {
+  font-family: 'Rokkitt Variable', serif;
+}
+
+li {
+  font-family: 'Inter Variable', sans-serif;
+}
+
+.navbar-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+/* Centered navbar when at the top */
+.navbar-top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  background: transparent;
+}
+
+.border-fade {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #343d41 50%, transparent 100%) 1;
+  border-style: solid;
+}
+
+.border-fade-light {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #d3d8da 50%, transparent 100%) 1;
+  border-style: solid;
+}
+
+.border-blue-y {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-image: linear-gradient(to right, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
+.border-blue-r {
+  border-right: 8px solid transparent;
+  border-image: linear-gradient(to bottom, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
+.border-blue {
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #207495 0%, #00a3e4 50%, #207495 100%) 1;
+  border-style: solid;
+}
+
+.custom-bg-gradient {
+  background: linear-gradient(to bottom, black 20%, rgba(0, 27, 74, 0.605) 60%, black 100%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);;
+}
+
+.custom-bg-gradient-b {
+  background: linear-gradient(to bottom, black 0%, transparent 100%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);
+}
+
+.custom-bg-gradient-t {
+  background: linear-gradient(to top, black 0%, transparent 80%),
+              linear-gradient(to right, black 0%, transparent 50%, black 100%);
+}
+
+.custom-bg-gradient-xy {
+  background: linear-gradient(to top, black 0%, transparent 40%, transparent 80%, black 100%),
+              linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%);
+}
+
+.grid-colors astro-island nav {
+  background-color: rgba(129,132,147,255);
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.grid-colors astro-island:nth-child(3) nav {
+  background-color: rgba(66,83,99,255);
+}
+
+.grid-colors astro-island:nth-child(4) nav {
+  background-color: rgba(43,57,68,255);
+}
+
+.grid-colors astro-island:nth-child(5) nav {
+  background-color: rgba(32,44,56,255);
+}
+
+.course-grid-colors nav:nth-child(1) {
+  background-color: rgba(66,83,99,255);
+}
+
+.course-grid-colors nav:nth-child(2) {
+  background-color: rgba(43,57,68,255);
+}
+
+.course-grid-colors nav:nth-child(3) {
+  background-color: rgba(32,44,56,255);
+}
+
+.filter-opacity-20 {
+  filter: opacity(0.15);
+}
+
+.border-bottom-blue {
+  border-bottom: 6px solid black;
+  border-image: linear-gradient(to right, transparent 20%, #00a3e4 50%, transparent 80%) 1;
+  border-style: solid;
+}
+
+#full-programs {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#full-programs.visible {
+  max-height: 5000px; /* or a large value to allow all content to show */
+}
+
+.word-clamp {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden
+}
+

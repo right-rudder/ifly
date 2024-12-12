@@ -1,18 +1,18 @@
 const stats = [
   {
-    value: 14,
-    title: "Aviones",
-  },
-  {
     value: 5,
     title: "Simuladores",
   },
   {
-    value: 1200,
-    title: "Testimoniales",
+    value: 14,
+    title: "Aviones",
   },
   {
-    value: 2800,
+    value: 800,
+    title: "Pilotos",
+  },
+  {
+    value: 1150,
     title: "Estudiantes graduados",
   },
 ];
