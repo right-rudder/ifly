@@ -52,11 +52,12 @@ export const navbarLinks = [
   },
   {
     name: "Quiénes somos",
+    link: "/nosotros/historia",
     submenu: [
-      {
-        name: "Filosofia",
-        link: "/nosotros/historia",
-      },
+      // {
+      //   name: "Filosofia",
+      //   link: "/nosotros/historia",
+      // },
       // {
       //   name: "Historia",
       //   link: "/nosotros/historia",
@@ -69,10 +70,10 @@ export const navbarLinks = [
       //   name: "Campus",
       //   link: "/nosotros/campus",
       // },
-      {
-        name: "Blog",
-        link: "/blog",
-      },
+      // {
+      //   name: "Blog",
+      //   link: "/blog",
+      // },
     ],
   },
   {
