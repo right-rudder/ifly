@@ -37,6 +37,9 @@
   .aircraft-maintenance-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/aircraft-maintenance-banner.webp);
   }  
+  .cursos-complementarios-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/cursos-complementarios-banner.webp);
+  }  
 }
 
 body {
