@@ -16,8 +16,7 @@ const { imgURL } = Astro.props;
 const data = Astro.currentLocale === "en" ? enData : esData;
 ---
 
-<section  class="relative top-0 bg-local bg-top bg-cover h-[80vh] flex flex-col justify-end items-center content-center gap-10 pb-20" 
-style=`background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0.7) 80%, black 100%), linear-gradient(to right, black 0%, transparent 10%, transparent 90%, black 100%), url(${imgURL})`
+<section  class={`relative top-0 bg-local bg-top bg-cover h-[80vh] flex flex-col justify-end items-center content-center gap-10 pb-20 ${imgURL}`} 
 >
   <h2 class="font-serif text-3xl lg:text-6xl text-white/90 tracking-normal"
       set:html={data.title}

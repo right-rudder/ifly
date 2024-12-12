@@ -55,6 +55,12 @@
   .blog-banner {
     background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/blog-banner.webp);
   }  
+  .carreers-form-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/carreers-form-banner.webp);
+  }  
+  .ifly-index-form-banner {
+    background-image:linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.1) 50%, black 100%), linear-gradient(to right, black 0%, transparent 40%, transparent 90%, black 100%), url(../assets/ifly-index-form-banner.webp);
+  }  
 }
 
 body {
