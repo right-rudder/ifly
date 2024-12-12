@@ -49,7 +49,7 @@ const info = esData;
     <div class="lg:mx-32 my-12">
       <div class="mx-auto max-w-[80vw] grid grid-cols-1 lg:grid-cols-3 course-grid-colors relative z-10">
         {
-          data.faqs.map((q) => (
+          data.faqs?.map((q) => (
             <nav>
               <div class="bg-dark-blue flex flex-col py-10 group w-full h-full">
                 <div class="border-r border-white/20 px-10 flex flex-col items-center group-last:border-0 w-full h-full">
@@ -75,6 +75,8 @@ const info = esData;
 
         <div class="flex flex-col w-11/12  mx-auto mt-32 mb-7 gap-4">
           <div class="flex flex-row gap-5 justify-around flex-wrap">
+{            
+          data.perfil?.length > 0 && (
             <div class="flex-col w-10/12 lg:w-2/5 gap-5">
               <h3
                 class="text-center text-2xl lg:text-4xl font-semibold"
@@ -85,15 +87,16 @@ const info = esData;
               >
               </p>    
             </div>
+)}
             <div class="flex-col w-10/12 lg:w-1/2">
               <h3
                 class="text-center text-2xl lg:text-4xl font-semibold"
-                set:html={info.sidebarTitle2}
+                set:html={data.cursosH ? data.cursosH : info.sidebarTitle2}
               >
               </h3>
               <ul>
                 {
-                  data.prerequisites.map((step) => (
+                  data.prerequisites?.map((step) => (
                     <li class="flex relative gap-2 w-full lg:w-8/12 mx-auto text-lg">
                       <FaDotCircle className="text-main-blue size-3 shrink-0 relative top-2" />
                       <div set:html={step} />
